@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import "./App.css";
 import { Course } from "./interfaces/course";
+import { Semester } from "./interfaces/semester";
 import { CourseDisplay } from "./components/CourseDisplay";
+import { SemesterDisplay } from "./components/SemesterDisplay";
 import courseData from "./data/onecourse.json";
+import semesterData from "./data/onesemester.json";
 
 const COURSE = courseData as Course;
+const SEMESTER = semesterData as Semester;
 
 function App(): JSX.Element {
     const [course] = useState<Course>(COURSE);
+    const [semester] = useState<Semester>(SEMESTER);
 
     return (
         <div className="App">
@@ -22,6 +27,7 @@ function App(): JSX.Element {
             <h1>Lexi Anderson</h1>
             <h2>Sarah Kimak</h2>
             <CourseDisplay course={course}></CourseDisplay>
+            <SemesterDisplay semester={semester}></SemesterDisplay>
         </div>
     );
 }
