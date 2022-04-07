@@ -1,17 +1,17 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 
 export function CourseDisplay({ course }: { course: Course }): JSX.Element {
     return (
-        <Container>
-            <table>
+        <Table bordered>
+            <tbody>
                 <tr>
-                    <th>{course.code}</th>
-                    <th>{course.description}</th>
-                    <th>{course.credits}</th>
+                    <td>{course.code}</td>
+                    <td>{course.type}</td>
+                    <td>{course.credits}</td>
                 </tr>
-            </table>
-        </Container>
+            </tbody>
+        </Table>
     );
 }
