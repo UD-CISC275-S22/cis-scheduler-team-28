@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+import { Course } from "./interfaces/course";
+import { CourseDisplay } from "./components/CourseDisplay";
+import courseData from "./data/onecourse.json";
+
+const COURSE = courseData as Course;
 
 function App(): JSX.Element {
+    const [course] = useState<Course>(COURSE);
+
     return (
         <div className="App">
             <header className="App-header">
@@ -14,6 +21,7 @@ function App(): JSX.Element {
             </p>
             <h1>Lexi Anderson</h1>
             <h2>Sarah Kimak</h2>
+            <CourseDisplay course={course}></CourseDisplay>
         </div>
     );
 }
