@@ -2,7 +2,7 @@ import React from "react";
 import { Stack } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { CourseDisplay } from "./CourseDisplay";
-export {};
+
 export function CourseList({ course }: { course: Course[] }): JSX.Element {
     return (
         <Stack gap={3}>
