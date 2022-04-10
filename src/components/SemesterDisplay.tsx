@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Table } from "react-bootstrap";
-import { CourseDisplay } from "./CourseDisplay";
+import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 
 export function SemesterDisplay({
@@ -20,7 +20,13 @@ export function SemesterDisplay({
                     </tr>
                 </thead>
                 <tbody>
-                    <CourseDisplay course={semester.courses[0]}></CourseDisplay>
+                    {semester.courses.map((course: Course) => (
+                        <tr key={course.code}>
+                            <td>{course.code}</td>
+                            <td>{course.type}</td>
+                            <td>{course.credits}</td>
+                        </tr>
+                    ))}
                 </tbody>
             </Table>
         </Container>
