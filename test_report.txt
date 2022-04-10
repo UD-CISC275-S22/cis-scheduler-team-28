@@ -2,38 +2,16 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-  console.error
-    Warning: validateDOMNesting(...): <table> cannot appear as a child of <tbody>.
-        at table
-        at /home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/node_modules/react-bootstrap/cjs/Table.js:21:3
-        at CourseDisplay (/home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/src/components/CourseDisplay.tsx:5:33)
-        at tbody
-        at table
-        at /home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/node_modules/react-bootstrap/cjs/Table.js:21:3
-        at div
-        at /home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/node_modules/react-bootstrap/cjs/Container.js:24:3
-        at SemesterDisplay (/home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/src/components/SemesterDisplay.tsx:7:5)
-        at div
-        at App (/home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/src/App.tsx:14:22)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10081:7)
-      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
-      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
-      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
-      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
-
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (111 ms)
+  ✓ renders the course name somewhere (68 ms)
 
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   63.63 |      100 |   42.85 |   63.63 |                   
+All files             |   66.66 |      100 |      50 |   66.66 |                   
  src                  |     100 |      100 |     100 |     100 |                   
   App.tsx             |     100 |      100 |     100 |     100 |                   
- src/components       |   33.33 |      100 |   33.33 |   33.33 |                   
+ src/components       |   42.85 |      100 |   42.85 |   42.85 |                   
   CourseDisplay.tsx   |     100 |      100 |     100 |     100 |                   
   CourseList.tsx      |       0 |      100 |       0 |       0 | 7-10              
   SemesterDisplay.tsx |     100 |      100 |     100 |     100 |                   
@@ -46,5 +24,5 @@ All files             |   63.63 |      100 |   42.85 |   63.63 |
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.157 s
+Time:        2.469 s
 Ran all test suites.
