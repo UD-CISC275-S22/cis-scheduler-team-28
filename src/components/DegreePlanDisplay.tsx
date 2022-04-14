@@ -11,6 +11,7 @@ export function DegreePlanDisplay({
 }): JSX.Element {
     return (
         <Container>
+            <h1>{degreeplan.title}</h1>
             {degreeplan.semesters.map((semester: Semester) => (
                 <SemesterDisplay
                     key={semester.title}

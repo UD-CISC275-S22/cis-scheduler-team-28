@@ -15,6 +15,10 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript - Final Project Team
                 28 (Lexi Anderson and Sarah Kimak)
             </header>
+            <div>
+                Degree Plans:
+                <li>{degreeplan.title}</li>
+            </div>
             <DegreePlanDisplay degreeplan={degreeplan}></DegreePlanDisplay>
         </div>
     );

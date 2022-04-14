@@ -10,17 +10,20 @@ describe("DegreePlanDisplay Component tests", () => {
     beforeEach(() => {
         render(<DegreePlanDisplay degreeplan={DEGREEPLAN} />);
     });
-    //add test for title of DegreePlan once added
+    test("The degree plan title is displayed", () => {
+        const title = screen.getAllByRole("heading");
+        expect(title[0]).toHaveTextContent("CS BS AI Concentration");
+    });
     test("The semester titles are displayed", () => {
         const titles = screen.getAllByRole("heading");
-        expect(titles[0]).toHaveTextContent("Fall 2020");
-        expect(titles[1]).toHaveTextContent("Spring 2021");
-        expect(titles[2]).toHaveTextContent("Fall 2021");
-        expect(titles[3]).toHaveTextContent("Spring 2022");
-        expect(titles[4]).toHaveTextContent("Fall 2022");
-        expect(titles[5]).toHaveTextContent("Spring 2023");
-        expect(titles[6]).toHaveTextContent("Fall 2023");
-        expect(titles[7]).toHaveTextContent("Spring 2024");
+        expect(titles[1]).toHaveTextContent("Fall 2020");
+        expect(titles[2]).toHaveTextContent("Spring 2021");
+        expect(titles[3]).toHaveTextContent("Fall 2021");
+        expect(titles[4]).toHaveTextContent("Spring 2022");
+        expect(titles[5]).toHaveTextContent("Fall 2022");
+        expect(titles[6]).toHaveTextContent("Spring 2023");
+        expect(titles[7]).toHaveTextContent("Fall 2023");
+        expect(titles[8]).toHaveTextContent("Spring 2024");
     });
     test("There are 8 tables", () => {
         const tables = screen.getAllByRole("table");
