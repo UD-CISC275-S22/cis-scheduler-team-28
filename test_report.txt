@@ -9,7 +9,7 @@ File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Lin
 ------------------------|---------|----------|---------|---------|-------------------
 All files               |    42.1 |       50 |   36.36 |    42.1 |                   
  src                    |       0 |      100 |       0 |       0 |                   
-  App.tsx               |       0 |      100 |       0 |       0 | 7-12              
+  App.tsx               |       0 |      100 |       0 |       0 | 8-13              
  src/components         |      50 |       50 |      40 |      50 |                   
   CourseDisplay.tsx     |       0 |      100 |       0 |       0 | 6                 
   DegreePlanDisplay.tsx |     100 |      100 |     100 |     100 |                   
@@ -24,5 +24,5 @@ All files               |    42.1 |       50 |   36.36 |    42.1 |
 Test Suites: 2 passed, 2 total
 Tests:       7 passed, 7 total
 Snapshots:   0 total
-Time:        2.892 s
+Time:        2.905 s
 Ran all test suites.
