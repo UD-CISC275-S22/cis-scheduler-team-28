@@ -11,7 +11,6 @@ export function SemesterDisplay({
     const [courseCode, setCode] = useState<string>("code");
     const [courseType, setType] = useState<string>("type");
     const [courseCredits, setCredits] = useState<string>("credits");
-
     const [isEditing, setIsEditing] = useState<boolean>(false);
 
     function updateCode(event: React.ChangeEvent<HTMLInputElement>) {
