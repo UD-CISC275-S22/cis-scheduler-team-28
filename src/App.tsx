@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, { useState } from "react";
 import "./App.css";
 import { DegreePlan } from "./interfaces/degreeplan";
@@ -12,9 +13,16 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript - Final Project Team
-                28 (Lexi Anderson and Sarah Kimak)
+                <p>University of Delaware CS Scheduler Site</p>
+                <p>Team 28: Lexi Anderson and Sarah Kimak</p>
             </header>
+            <p>
+                Welcome to the scheduler for UD CS and CIS degrees! It can be
+                very difficult to navigate the college degree planning world
+                without actual advisors, so we are creating a site to help
+                students and professors, broken down by plans, semesters and
+                required courses.
+            </p>
             <div>
                 Degree Plans:
                 <li>{degreeplan.title}</li>
