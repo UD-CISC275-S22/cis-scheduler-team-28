@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Form, Table } from "react-bootstrap";
+import { Button, Container, Form, Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 
@@ -12,6 +12,7 @@ export function SemesterDisplay({
     const [courseType, setType] = useState<string>("type");
     const [courseCredits, setCredits] = useState<string>("credits");
     const [isEditing, setIsEditing] = useState<boolean>(false);
+    const [courseList, setCourseList] = useState<Course[]>(semester.courses);
 
     function updateCode(event: React.ChangeEvent<HTMLInputElement>) {
         setCode(event.target.value);
@@ -40,7 +41,7 @@ export function SemesterDisplay({
                         </tr>
                     </thead>
                     <tbody>
-                        {semester.courses.map((course: Course) => (
+                        {courseList.map((course: Course) => (
                             <tr key={course.code}>
                                 <td>{course.code}</td>
                                 <td>{course.type}</td>
@@ -85,6 +86,11 @@ export function SemesterDisplay({
                         </div>
                     )}
                 </div>
+            </div>
+            <div>
+                <Button onClick={() => setCourseList([])}>
+                    Clear Semesters
+                </Button>
             </div>
         </>
     );
