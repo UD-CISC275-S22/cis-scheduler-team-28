@@ -88,9 +88,7 @@ export function SemesterDisplay({
                 </div>
             </div>
             <div>
-                <Button onClick={() => setCourseList([])}>
-                    Clear Semesters
-                </Button>
+                <Button onClick={() => setCourseList([])}>Clear Courses</Button>
             </div>
         </>
     );
