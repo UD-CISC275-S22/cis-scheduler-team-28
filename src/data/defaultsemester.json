@@ -1,0 +1,365 @@
+{
+    "title": "CS BS Default Custom / No Concentration",
+    "semesters": [
+        {
+            "title": "Fall 2020",
+            "courses": [
+                {
+                    "code": "CISC108",
+                    "title": "Intro to CS I",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["core"]
+                },
+                {
+                    "code": "EGGG101",
+                    "title": "Intro to Engineering",
+                    "description": "learn",
+                    "credits": 2,
+                    "prereq": [],
+                    "type": ["COE", "univ"]
+                },
+                {
+                    "code": "ENGL110",
+                    "title": "Seminar in Composition",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["core"]
+                },
+                {
+                    "code": "MATH241",
+                    "title": "Analytic Geometry and Calculus A",
+                    "description": "learn",
+                    "credits": 4,
+                    "prereq": ["MATH117/test in"],
+                    "type": ["core"]
+                },
+                {
+                    "code": "ELEC",
+                    "title": "Creative Arts Breadth",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["COE", "univA"]
+                }
+            ]
+        },
+        {
+            "title": "Spring 2021",
+            "courses": [
+                {
+                    "code": "CISC181",
+                    "title": "Intro to Computer Science II",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["CISC108"],
+                    "type": ["core"]
+                },
+                {
+                    "code": "CISC210",
+                    "title": "Intro to Systems Programming",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["CISC108"],
+                    "type": ["core"]
+                },
+                {
+                    "code": "MATH242",
+                    "title": "Analytic Geometry and Calculus B",
+                    "description": "learn",
+                    "credits": 4,
+                    "prereq": ["MATH241"],
+                    "type": ["concentration"]
+                },
+                {
+                    "code": "ELEC",
+                    "title": "Multicultural and Historical Breadth",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["NA"],
+                    "type": ["COE", "univB", "univMC"]
+                },
+                {
+                    "code": "ELEC",
+                    "title": "Social Breadth",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["COE", "univC"]
+                }
+            ]
+        },
+        {
+            "title": "Fall 2021",
+            "courses": [
+                {
+                    "code": "CISC220",
+                    "title": "Data Structures",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["CISC210"],
+                    "type": ["core"]
+                },
+                {
+                    "code": "CISC260",
+                    "title": "Machine Organization and Assembly Language",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["CISC210"],
+                    "type": ["core"]
+                },
+                {
+                    "code": "MATH210",
+                    "title": "Discrete Mathematics I",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["MATH241"],
+                    "type": ["core"]
+                },
+                {
+                    "code": "LABSCI",
+                    "title": "Part 1 of Lab Science",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["core"]
+                },
+                {
+                    "code": "ELEC",
+                    "title": "Upper Level COE Breadth",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["COE"]
+                }
+            ]
+        },
+        {
+            "title": "Spring 2022",
+            "courses": [
+                {
+                    "code": "CISC275",
+                    "title": "Intro to Software Engineering",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["CISC220"],
+                    "type": ["core"]
+                },
+                {
+                    "code": "CISC303",
+                    "title": "Automata Theory",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["MATH210", "CISC220"],
+                    "type": ["core", "COE"]
+                },
+                {
+                    "code": "MATH205",
+                    "title": "Stat Required Course",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["MATH210"],
+                    "type": ["core"]
+                },
+                {
+                    "code": "LABSCI",
+                    "title": "Part 2 of Lab Science",
+                    "description": "learn",
+                    "credits": 4,
+                    "prereq": ["LABSCI1"],
+                    "type": ["core"]
+                },
+                {
+                    "code": "ENGL312",
+                    "title": "Communications in Business",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["COE", "core"]
+                }
+            ]
+        },
+        {
+            "title": "Fall 2022",
+            "courses": [
+                {
+                    "code": "CONCENTRATION",
+                    "title": "Restricted Elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["concentration"]
+                },
+                {
+                    "code": "CISC320",
+                    "title": "Intro to Algs",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["CISC220"],
+                    "type": ["core"]
+                },
+                {
+                    "code": "CISC361",
+                    "title": "Operating Systems",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["CISC220", "CISC260"],
+                    "type": ["concentration"]
+                },
+                {
+                    "code": "ELEC",
+                    "title": "Upper Level COE Breadth",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["COE"]
+                },
+                {
+                    "code": "ELEC",
+                    "title": "Tech Elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["elective"]
+                }
+            ]
+        },
+        {
+            "title": "Spring 2023",
+            "courses": [
+                {
+                    "code": "ELEC",
+                    "title": "Tech Elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["elective"]
+                },
+                {
+                    "code": "CONCENTRATION",
+                    "title": "Restricted Elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["concentration"]
+                },
+                {
+                    "code": "CONCENTRATION",
+                    "title": "Restricted Elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["CISC220", "CISC304"],
+                    "type": ["concentration"]
+                },
+                {
+                    "code": "ELEC",
+                    "title": "free elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["elective"]
+                },
+                {
+                    "code": "ELEC",
+                    "title": "free elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["elective"]
+                }
+            ]
+        },
+        {
+            "title": "Fall 2023",
+            "courses": [
+                {
+                    "code": "CONCENTRATION",
+                    "title": "Restricted Elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["concentration"]
+                },
+                {
+                    "code": "CISC498",
+                    "title": "Senior Design Project I",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["CISC275", "CISC320"],
+                    "type": ["core", "univ"]
+                },
+                {
+                    "code": "CONCENTRATION",
+                    "title": "Concentration Requirement",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["concentration"]
+                },
+                {
+                    "code": "ELEC",
+                    "title": "Free Elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["elective"]
+                },
+                {
+                    "code": "ELEC",
+                    "title": "Free Elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["elective"]
+                }
+            ]
+        },
+        {
+            "title": "Spring 2024",
+            "courses": [
+                {
+                    "code": "CONCENTRATION",
+                    "title": "Required Course",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["concentration"]
+                },
+                {
+                    "code": "CISC499",
+                    "title": "Senior Design Project II",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": ["CISC498"],
+                    "type": ["core"]
+                },
+                {
+                    "code": "ELEC",
+                    "title": "Free Elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["elective"]
+                },
+                {
+                    "code": "ELEC",
+                    "title": "Free Elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["elective"]
+                },
+                {
+                    "code": "CONCENTRATION",
+                    "title": "Restricted Elective",
+                    "description": "learn",
+                    "credits": 3,
+                    "prereq": [],
+                    "type": ["concentration"]
+                }
+            ]
+        }
+    ]
+}
