@@ -29,4 +29,9 @@ describe("DegreePlanDisplay Component tests", () => {
         const tables = screen.getAllByRole("table");
         expect(tables).toHaveLength(8);
     });
+    test("The clear semesters button works properly", () => {
+        const use = screen.getByRole("button", { name: /clear semesters/i });
+        use.click();
+        expect(screen.queryByRole("table")).toBeNull();
+    });
 });

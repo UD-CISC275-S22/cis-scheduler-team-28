@@ -25,11 +25,17 @@ describe("SemesterDisplay Component tests", () => {
         expect(tableHeaders[2]).toHaveTextContent("Credits");
     });
     test("The table's rows are displayed properly", () => {
-        const firstRow = screen.getAllByRole("row");
-        expect(firstRow[1]).toHaveTextContent("CISC108core3");
-        expect(firstRow[2]).toHaveTextContent("EGGG101COEuniv2");
-        expect(firstRow[3]).toHaveTextContent("ENGL110core3");
-        expect(firstRow[4]).toHaveTextContent("MATH241core4");
-        expect(firstRow[5]).toHaveTextContent("ARTH199COEunivA3");
+        const rows = screen.getAllByRole("row");
+        expect(rows[1]).toHaveTextContent("CISC108core3");
+        expect(rows[2]).toHaveTextContent("EGGG101COEuniv2");
+        expect(rows[3]).toHaveTextContent("ENGL110core3");
+        expect(rows[4]).toHaveTextContent("MATH241core4");
+        expect(rows[5]).toHaveTextContent("ARTH199COEunivA3");
+    });
+    test("The clear courses button works properly", () => {
+        const use = screen.getByRole("button", { name: /clear courses/i });
+        use.click();
+        const rows = screen.getAllByRole("row");
+        expect(rows.length).toBe(1);
     });
 });
