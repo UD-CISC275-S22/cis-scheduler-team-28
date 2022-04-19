@@ -7,10 +7,12 @@ PASS src/tests/DegreePlanDisplay.test.tsx
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |   52.17 |       50 |   46.15 |   52.17 |                   
+All files               |   30.76 |       50 |   27.27 |   30.76 |                   
  src                    |       0 |      100 |       0 |       0 |                   
   App.tsx               |       0 |      100 |       0 |       0 | 8-13              
- src/components         |      60 |       50 |      50 |      60 |                   
+ src/components         |   33.33 |       50 |   28.57 |   33.33 |                   
+  AddCourseModal.tsx    |       0 |      100 |       0 |       0 | 14-78             
+  AddSemesterModal.tsx  |       0 |      100 |       0 |       0 | 14-38             
   CourseDisplay.tsx     |       0 |      100 |       0 |       0 | 6                 
   DegreePlanDisplay.tsx |     100 |      100 |     100 |     100 |                   
   ExportCSVFile.tsx     |       0 |      100 |       0 |       0 | 6-12              
@@ -24,5 +26,5 @@ All files               |   52.17 |       50 |   46.15 |   52.17 |
 Test Suites: 2 passed, 2 total
 Tests:       9 passed, 9 total
 Snapshots:   0 total
-Time:        4.067 s
+Time:        3.368 s
 Ran all test suites.
