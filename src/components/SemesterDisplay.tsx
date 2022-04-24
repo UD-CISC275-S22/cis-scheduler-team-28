@@ -38,6 +38,7 @@ export function SemesterDisplay({
                             <th>Code</th>
                             <th>Type</th>
                             <th>Credits</th>
+                            <th>Edit Course</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,6 +47,14 @@ export function SemesterDisplay({
                                 <td>{course.code}</td>
                                 <td>{course.type}</td>
                                 <td>{course.credits}</td>
+                                <td>
+                                    <Form.Check
+                                        type="switch"
+                                        id="is-edit-mode"
+                                        checked={isEditing}
+                                        onChange={updateEditing}
+                                    />
+                                </td>
                             </tr>
                         ))}
                     </tbody>
@@ -53,13 +62,6 @@ export function SemesterDisplay({
             </Container>
             <div>
                 <div>
-                    <Form.Check
-                        type="switch"
-                        id="is-edit-mode"
-                        label="Edit Course"
-                        checked={isEditing}
-                        onChange={updateEditing}
-                    />
                     {isEditing && (
                         <div>
                             <Form.Group controlId="formCourseCode">
