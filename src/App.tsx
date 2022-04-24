@@ -2,16 +2,27 @@ import React, { useState } from "react";
 import "./App.css";
 import { DegreePlan } from "./interfaces/degreeplan";
 import { DegreePlanDisplay } from "./components/DegreePlanDisplay";
-import degreeplanData from "./data/mockdata.json";
-import { Button, Col, Container, Modal, Row } from "react-bootstrap";
+import defaultdegreeplan from "./data/defaultsemester.json";
+import mockdegreeplan from "./data/mockdata.json";
+import { Button, Col, Container, Form, Modal, Row } from "react-bootstrap";
 
-const DEGREEPLAN = degreeplanData as DegreePlan;
+const DEFAULTDEGREEPLAN = defaultdegreeplan as DegreePlan;
+const MOCKDEGREEPLAN = mockdegreeplan as DegreePlan;
+const DEGREEPLANLIST: DegreePlan[] = [DEFAULTDEGREEPLAN, MOCKDEGREEPLAN];
 
 function App(): JSX.Element {
-    const [degreeplan] = useState<DegreePlan>(DEGREEPLAN);
+    const [degreeplanList] = useState<DegreePlan[]>(DEGREEPLANLIST);
+    const [degreeplan, setDegreeplan] = useState<DegreePlan>(degreeplanList[0]);
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    function updateDegreeplan(title: string) {
+        const degreeplanIndex = degreeplanList.findIndex(
+            (degreeplan: DegreePlan): boolean => degreeplan.title === title
+        );
+        setDegreeplan(degreeplanList[degreeplanIndex]);
+    }
 
     return (
         <div className="App">
@@ -56,8 +67,24 @@ function App(): JSX.Element {
                 </Container>
             </header>
             <div>
-                Degree Plans:
-                <li>{degreeplan.title}</li>
+                <Form.Group controlId="chosen-degreeplan">
+                    <Form.Label>Choose Degree Plan to Display:</Form.Label>
+                    <Form.Select
+                        value={degreeplan.title}
+                        onChange={(
+                            event: React.ChangeEvent<HTMLSelectElement>
+                        ) => updateDegreeplan(event.target.value)}
+                    >
+                        {degreeplanList.map((degreeplan: DegreePlan) => (
+                            <option
+                                key={degreeplan.title}
+                                value={degreeplan.title}
+                            >
+                                {degreeplan.title}
+                            </option>
+                        ))}
+                    </Form.Select>
+                </Form.Group>
             </div>
             <DegreePlanDisplay degreeplan={degreeplan}></DegreePlanDisplay>
         </div>
