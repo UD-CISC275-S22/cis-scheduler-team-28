@@ -13,7 +13,7 @@ export interface Course {
     code: string;
     title: string;
     description: string;
-    credits: number;
+    credits: string;
     prereq: string[];
     type: CourseType[];
 }

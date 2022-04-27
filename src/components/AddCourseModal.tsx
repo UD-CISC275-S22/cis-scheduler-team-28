@@ -20,7 +20,7 @@ export function AddCourse({
             code: "",
             title: "",
             description: "",
-            credits: 0,
+            credits: "0",
             prereq: [],
             type: []
         });

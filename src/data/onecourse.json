@@ -2,7 +2,7 @@
     "code": "CISC108",
     "title": "Intro to CS I",
     "description": "learn",
-    "credits": 3,
+    "credits": "3",
     "prereq": [],
     "type": ["core"]
 }

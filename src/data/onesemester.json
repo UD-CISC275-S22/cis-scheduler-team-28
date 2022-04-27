@@ -5,7 +5,7 @@
             "code": "CISC108",
             "title": "Intro to CS I",
             "description": "learn",
-            "credits": 3,
+            "credits": "3",
             "prereq": [],
             "type": ["core"]
         },
@@ -13,7 +13,7 @@
             "code": "EGGG101",
             "title": "Intro to Engineering",
             "description": "learn",
-            "credits": 2,
+            "credits": "2",
             "prereq": [],
             "type": ["COE", "univ"]
         },
@@ -21,7 +21,7 @@
             "code": "ENGL110",
             "title": "Seminar in Composition",
             "description": "learn",
-            "credits": 3,
+            "credits": "3",
             "prereq": [],
             "type": ["core"]
         },
@@ -29,7 +29,7 @@
             "code": "MATH241",
             "title": "Analytic Geometry and Calculus A",
             "description": "learn",
-            "credits": 4,
+            "credits": "4",
             "prereq": ["MATH117/test in"],
             "type": ["core"]
         },
@@ -37,7 +37,7 @@
             "code": "ARTH199",
             "title": "Topics in Art History",
             "description": "learn",
-            "credits": 3,
+            "credits": "3",
             "prereq": [],
             "type": ["COE", "univA"]
         }
