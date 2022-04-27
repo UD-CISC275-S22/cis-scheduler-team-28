@@ -7,16 +7,17 @@ PASS src/tests/DegreePlanDisplay.test.tsx
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |   23.07 |       50 |   21.42 |      24 |                   
+All files               |   11.94 |      100 |   17.14 |   13.11 |                   
  src                    |       0 |      100 |       0 |       0 |                   
   App.tsx               |       0 |      100 |       0 |       0 | 9-79              
- src/components         |   33.33 |       50 |   28.57 |   33.33 |                   
+ src/components         |   15.68 |      100 |   21.42 |   17.02 |                   
   AddCourseModal.tsx    |       0 |      100 |       0 |       0 | 14-77             
   AddSemesterModal.tsx  |       0 |      100 |       0 |       0 | 14-37             
-  CourseDisplay.tsx     |       0 |      100 |       0 |       0 | 6                 
+  CourseDisplay.tsx     |       0 |      100 |       0 |       0 | 15-54             
   DegreePlanDisplay.tsx |     100 |      100 |     100 |     100 |                   
+  EditCourse.tsx        |       0 |      100 |       0 |       0 | 16-73             
   ExportCSVFile.tsx     |       0 |      100 |       0 |       0 | 6-12              
-  SemesterDisplay.tsx   |   66.66 |       50 |   42.85 |   66.66 | 18-29             
+  SemesterDisplay.tsx   |     100 |      100 |     100 |     100 |                   
  src/interfaces         |       0 |        0 |       0 |       0 |                   
   course.ts             |       0 |        0 |       0 |       0 |                   
   degreeplan.ts         |       0 |        0 |       0 |       0 |                   
@@ -26,5 +27,5 @@ All files               |   23.07 |       50 |   21.42 |      24 |
 Test Suites: 2 passed, 2 total
 Tests:       9 passed, 9 total
 Snapshots:   0 total
-Time:        4.07 s
+Time:        3.279 s
 Ran all test suites.
