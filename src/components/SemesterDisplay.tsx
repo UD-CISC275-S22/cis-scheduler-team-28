@@ -14,17 +14,14 @@ export function SemesterDisplay({
 }): JSX.Element {
     function clearCourses(
         degreeplan: DegreePlan,
-        degtitle: string,
         semtitle: string
     ): DegreePlan {
         return {
             ...degreeplan,
-            [degtitle]: degreeplan.semesters.map(
-                (semester: Semester) =>
-                    semester.title !== semtitle
-                        ? semester
-                        : { ...semester, courses: [] },
-                console.log(degreeplan)
+            semesters: degreeplan.semesters.map((semester: Semester) =>
+                semester.title !== semtitle
+                    ? semester
+                    : { ...semester, courses: [] }
             )
         };
     }
@@ -57,11 +54,7 @@ export function SemesterDisplay({
                         <Button
                             onClick={() =>
                                 setDegreeplan(
-                                    clearCourses(
-                                        degreeplan,
-                                        degreeplan.title,
-                                        semester.title
-                                    )
+                                    clearCourses(degreeplan, semester.title)
                                 )
                             }
                         >
