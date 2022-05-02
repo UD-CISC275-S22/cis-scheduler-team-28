@@ -5,24 +5,47 @@ import { SemesterDisplay } from "./SemesterDisplay";
 import { DegreePlan } from "../interfaces/degreeplan";
 
 export function DegreePlanDisplay({
-    degreeplan
+    degreeplan,
+    setDegreeplan
 }: {
     degreeplan: DegreePlan;
+    setDegreeplan: (degreeplan: DegreePlan) => void;
 }): JSX.Element {
-    const [semesterList, setSemesterList] = useState<Semester[]>(
-        degreeplan.semesters
-    );
+    function clearSemesters(degreeplan: DegreePlan) {
+        setDegreeplan({ ...degreeplan, semesters: [] });
+    }
+
+    /*function clearCourses(degreeplan: DegreePlan, title: string): DegreePlan {
+        return {
+            ...degreeplan,
+            [title]: degreeplan.semesters.map((semester: Semester) =>
+                semester.title !== title
+                    ? semester
+                    : { ...semester, courses: [] }
+            )
+        };
+    }*/
+
+    /*function clearSemester(title: string, degreeplan: DegreePlan) {
+        setDegreeplan(
+            degreeplan.semesters.filter(
+                (semester: Semester): boolean => semester.title !== title
+            )
+        );
+    }*/
 
     return (
         <Container>
             <h1>{degreeplan.title}</h1>
-            {semesterList.map((semester: Semester) => (
+            {degreeplan.semesters.map((semester: Semester) => (
                 <SemesterDisplay
                     key={semester.title}
                     semester={semester}
                 ></SemesterDisplay>
             ))}
-            <Button onClick={() => setSemesterList([])}>Clear Semesters</Button>
+            <Button onClick={() => clearSemesters(degreeplan)}>
+                Clear Semesters
+            </Button>
         </Container>
     );
 }

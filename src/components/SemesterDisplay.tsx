@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Container, Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
+import { v4 as uuid } from "uuid";
 
 export function SemesterDisplay({
     semester
 }: {
     semester: Semester;
 }): JSX.Element {
-    const [courseList, setCourseList] = useState<Course[]>(semester.courses);
-
     return (
         <>
             <div>
@@ -24,8 +23,8 @@ export function SemesterDisplay({
                             </tr>
                         </thead>
                         <tbody>
-                            {courseList.map((course: Course) => (
-                                <tr key={course.code}>
+                            {semester.courses.map((course: Course) => (
+                                <tr key={uuid()}>
                                     <td>{course.code}</td>
                                     <td>{course.type}</td>
                                     <td>{course.credits}</td>
@@ -36,7 +35,9 @@ export function SemesterDisplay({
                 </Container>
             </div>
             <div>
-                <Button onClick={() => setCourseList([])}>Clear Courses</Button>
+                <Button onClick={() => (semester.courses = [])}>
+                    Clear Courses
+                </Button>
             </div>
         </>
     );

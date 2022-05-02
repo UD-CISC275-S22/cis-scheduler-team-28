@@ -21,7 +21,11 @@ function App(): JSX.Element {
         const degreeplanIndex = degreeplanList.findIndex(
             (degreeplan: DegreePlan): boolean => degreeplan.title === title
         );
-        setDegreeplan(degreeplanList[degreeplanIndex]);
+        setDegreeplan({
+            ...degreeplan,
+            title: degreeplanList[degreeplanIndex].title,
+            semesters: degreeplanList[degreeplanIndex].semesters
+        });
     }
 
     return (
@@ -86,7 +90,10 @@ function App(): JSX.Element {
                     </Form.Select>
                 </Form.Group>
             </div>
-            <DegreePlanDisplay degreeplan={degreeplan}></DegreePlanDisplay>
+            <DegreePlanDisplay
+                degreeplan={degreeplan}
+                setDegreeplan={setDegreeplan}
+            ></DegreePlanDisplay>
         </div>
     );
 }
