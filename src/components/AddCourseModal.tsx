@@ -81,7 +81,7 @@ export function AddCourse({
             </Modal.Body>
             <Modal.Footer>
                 <Button
-                    variant="seconary"
+                    variant="secondary"
                     onClick={handleClose}
                     data-testid="cancel-button"
                 >
