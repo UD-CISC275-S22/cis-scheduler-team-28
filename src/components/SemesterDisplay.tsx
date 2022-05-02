@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Table } from "react-bootstrap";
+import { Button, Container, Modal, Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import { DegreePlan } from "../interfaces/degreeplan";
@@ -12,6 +12,10 @@ export function SemesterDisplay({
     degreeplan: DegreePlan;
     setDegreeplan: (degreeplan: DegreePlan) => void;
 }): JSX.Element {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
     function clearCourses(
         degreeplan: DegreePlan,
         semtitle: string
@@ -37,6 +41,7 @@ export function SemesterDisplay({
                                     <th>Code</th>
                                     <th>Type</th>
                                     <th>Credits</th>
+                                    <th>Course Info</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,6 +50,39 @@ export function SemesterDisplay({
                                         <td>{course.code}</td>
                                         <td>{course.type}</td>
                                         <td>{course.credits}</td>
+                                        <td>
+                                            <Button
+                                                className="course-info"
+                                                onClick={handleOpen}
+                                            >
+                                                Expand
+                                            </Button>
+                                            <Modal
+                                                show={open}
+                                                onHide={handleClose}
+                                            >
+                                                <Modal.Header closeButton>
+                                                    <Modal.Title>
+                                                        {course.title}
+                                                    </Modal.Title>
+                                                </Modal.Header>
+                                                <Modal.Body>
+                                                    <p>
+                                                        Course Description:{" "}
+                                                        {course.description}
+                                                    </p>
+                                                    <p>
+                                                        Course Prereqs:{" "}
+                                                        {course.prereq}
+                                                    </p>
+                                                    <p>
+                                                        Requirement Fulfilled:{" "}
+                                                        {course.type}
+                                                    </p>
+                                                </Modal.Body>
+                                                <Modal.Footer></Modal.Footer>
+                                            </Modal>
+                                        </td>
                                     </tr>
                                 ))}
                             </tbody>
