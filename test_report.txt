@@ -2,30 +2,11 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/tests/SemesterDisplay.test.tsx
-PASS src/tests/DegreePlanDisplay.test.tsx
-------------------------|---------|----------|---------|---------|-------------------
-File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-------------------------|---------|----------|---------|---------|-------------------
-All files               |   11.94 |      100 |   17.14 |   13.11 |                   
- src                    |       0 |      100 |       0 |       0 |                   
-  App.tsx               |       0 |      100 |       0 |       0 | 9-79              
- src/components         |   15.68 |      100 |   21.42 |   17.02 |                   
-  AddCourseModal.tsx    |       0 |      100 |       0 |       0 | 14-77             
-  AddSemesterModal.tsx  |       0 |      100 |       0 |       0 | 14-37             
-  CourseDisplay.tsx     |       0 |      100 |       0 |       0 | 15-54             
-  DegreePlanDisplay.tsx |     100 |      100 |     100 |     100 |                   
-  EditCourse.tsx        |       0 |      100 |       0 |       0 | 16-73             
-  ExportCSVFile.tsx     |       0 |      100 |       0 |       0 | 6-12              
-  SemesterDisplay.tsx   |     100 |      100 |     100 |     100 |                   
- src/interfaces         |       0 |        0 |       0 |       0 |                   
-  course.ts             |       0 |        0 |       0 |       0 |                   
-  degreeplan.ts         |       0 |        0 |       0 |       0 |                   
-  semester.ts           |       0 |        0 |       0 |       0 |                   
-------------------------|---------|----------|---------|---------|-------------------
-
-Test Suites: 2 passed, 2 total
-Tests:       9 passed, 9 total
-Snapshots:   0 total
-Time:        3.279 s
-Ran all test suites.
+No tests found, exiting with code 1
+Run with `--passWithNoTests` to exit with code 0
+In /home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28
+  21 files checked.
+  testMatch: /home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/src/**/__tests__/**/*.{js,jsx,ts,tsx}, /home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/src/**/*.{spec,test}.{js,jsx,ts,tsx} - 0 matches
+  testPathIgnorePatterns: /node_modules/ - 21 matches
+  testRegex:  - 0 matches
+Pattern:  - 0 matches
