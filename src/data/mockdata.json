@@ -10,7 +10,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "EGGG101",
@@ -18,7 +18,7 @@
                     "description": "learn",
                     "credits": "2",
                     "preReq": "",
-                    "type": ["COE", "univ"]
+                    "type": "COE and univ"
                 },
                 {
                     "code": "ENGL110",
@@ -26,7 +26,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "MATH241",
@@ -34,7 +34,7 @@
                     "description": "learn",
                     "credits": "4",
                     "preReq": "MATH117/test in",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "ARTH199",
@@ -42,7 +42,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["COE", "univA"]
+                    "type": "COE and univA"
                 }
             ]
         },
@@ -55,7 +55,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC108",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "CISC210",
@@ -63,7 +63,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC108",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "MATH242",
@@ -71,7 +71,7 @@
                     "description": "learn",
                     "credits": "4",
                     "preReq": "MATH241",
-                    "type": ["concentration"]
+                    "type": "concentration"
                 },
                 {
                     "code": "HIST104",
@@ -79,7 +79,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "NA",
-                    "type": ["COE", "univB", "univMC"]
+                    "type": "COE, univB and univMC"
                 },
                 {
                     "code": "POSC150",
@@ -87,7 +87,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["COE", "univC"]
+                    "type": "COE and univC"
                 }
             ]
         },
@@ -100,7 +100,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC210",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "CISC260",
@@ -108,7 +108,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC210",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "MATH210",
@@ -116,7 +116,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "MATH241",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "BISC207",
@@ -124,7 +124,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "BUAD350",
@@ -132,7 +132,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["COE"]
+                    "type": "COE"
                 }
             ]
         },
@@ -145,7 +145,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC220",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "CISC355",
@@ -153,7 +153,7 @@
                     "description": "learn",
                     "credits": 3,
                     "preReq": "",
-                    "type": ["core", "COE"]
+                    "type": "core and COE"
                 },
                 {
                     "code": "MATH205",
@@ -161,7 +161,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "MATH210",
-                    "type": ["concentration"]
+                    "type": "concentration"
                 },
                 {
                     "code": "BISC208",
@@ -169,7 +169,7 @@
                     "description": "learn",
                     "credits": "4",
                     "preReq": "BISC207",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "ENGL280",
@@ -177,7 +177,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["COE"]
+                    "type": "COE"
                 }
             ]
         },
@@ -190,7 +190,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC220",
-                    "type": ["concentration"]
+                    "type": "concentration"
                 },
                 {
                     "code": "CISC320",
@@ -198,7 +198,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC220",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "CISC361",
@@ -206,7 +206,7 @@
                     "description": "learn",
                     "credits": 3,
                     "preReq": "CISC220 and CISC260",
-                    "type": ["concentration"]
+                    "type": "concentration"
                 },
                 {
                     "code": "LING101",
@@ -214,7 +214,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["COE"]
+                    "type": "COE"
                 },
                 {
                     "code": "CISC367",
@@ -222,7 +222,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["elective"]
+                    "type": "elective"
                 }
             ]
         },
@@ -235,7 +235,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC220",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "CISC442",
@@ -243,7 +243,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC220",
-                    "type": ["concentration"]
+                    "type": "concentration"
                 },
                 {
                     "code": "CISC481",
@@ -251,7 +251,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC220 and CISC304",
-                    "type": ["concentration"]
+                    "type": "concentration"
                 },
                 {
                     "code": "ENGL410",
@@ -259,7 +259,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "ENGL110",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "LING202",
@@ -267,7 +267,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "LING101",
-                    "type": ["concentration"]
+                    "type": "concentration"
                 }
             ]
         },
@@ -280,7 +280,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC220 and MATH205",
-                    "type": ["concentration"]
+                    "type": "concentration"
                 },
                 {
                     "code": "CISC498",
@@ -288,7 +288,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC275 and CISC320",
-                    "type": ["core", "univ"]
+                    "type": "core and univ"
                 },
                 {
                     "code": "LING202",
@@ -296,7 +296,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "LING101",
-                    "type": ["concentration"]
+                    "type": "concentration"
                 },
                 {
                     "code": "DIST250",
@@ -304,7 +304,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["elective"]
+                    "type": "elective"
                 },
                 {
                     "code": "ART190",
@@ -312,7 +312,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["elective"]
+                    "type": "elective"
                 }
             ]
         },
@@ -325,7 +325,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC220 and MATH205",
-                    "type": ["concentration"]
+                    "type": "concentration"
                 },
                 {
                     "code": "CISC499",
@@ -333,7 +333,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "CISC498",
-                    "type": ["core"]
+                    "type": "elective"
                 },
                 {
                     "code": "LING404",
@@ -341,7 +341,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "LING101",
-                    "type": ["concentration"]
+                    "type": "concentration"
                 },
                 {
                     "code": "CRJU110",
@@ -349,7 +349,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["elective"]
+                    "type": "elective"
                 },
                 {
                     "code": "LLCU316",
@@ -357,7 +357,7 @@
                     "description": "learn",
                     "credits": "3",
                     "preReq": "",
-                    "type": ["elective"]
+                    "type": "elective"
                 }
             ]
         }

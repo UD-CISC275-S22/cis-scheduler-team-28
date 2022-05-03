@@ -22,7 +22,7 @@ export function AddCourse({
             descr: "",
             credits: "0",
             preReq: "",
-            type: []
+            type: ""
         });
         handleClose();
     }
