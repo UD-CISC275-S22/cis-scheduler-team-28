@@ -130,6 +130,9 @@ function App(): JSX.Element {
                 <DegreePlanDisplay
                     degreeplan={degreeplan}
                     setDegreeplan={setDegreeplan}
+                    show={open}
+                    handleOpen={handleOpen}
+                    handleClose={handleClose}
                 ></DegreePlanDisplay>
             </div>
             <div>

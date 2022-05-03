@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Col, Form, Modal, Row } from "react-bootstrap";
 import { DegreePlan } from "../interfaces/degreeplan";
 
-export function addDegreePlan({
+export function EditDegreePlan({
     show,
     handleClose,
-    addPlan
+    degreeplan,
+    setDegreeplan
 }: {
     show: boolean;
     handleClose: () => void;
-    addPlan: (newPlan: DegreePlan) => void;
+    degreeplan: DegreePlan;
+    setDegreeplan: (degreeplan: DegreePlan) => void;
 }) {
-    const [title, setTitle] = useState<string>("");
     function saveChanges() {
-        addPlan({
-            title: "",
-            semesters: []
-        });
         handleClose();
+    }
+    function setTitle(newTitle: string): DegreePlan {
+        return { ...degreeplan, title: newTitle };
     }
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
@@ -27,14 +27,14 @@ export function addDegreePlan({
             <Modal.Body>
                 <Form.Group controlId="AddPlan" as={Row}>
                     <Form.Label column sm={3}>
-                        Semester Title:
+                        DegreePlan Title:
                     </Form.Label>
                     <Col>
                         <Form.Control
-                            value={title}
+                            value={degreeplan.title}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => setTitle(event.target.value)}
+                            ) => setDegreeplan(setTitle(event.target.value))}
                         />
                     </Col>
                 </Form.Group>
