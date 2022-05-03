@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Col, Form, Modal, Row } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
 
-function AddSemester({
+export function AddSemester({
     show,
     handleClose,
     addSemester
