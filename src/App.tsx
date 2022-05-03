@@ -135,8 +135,6 @@ function App(): JSX.Element {
             <div>
                 <Form.Group controlId="course-search">
                     <Form.Label>Course Lookup:</Form.Label>
-                    pool={pool}
-                    setPool={setPool}
                 </Form.Group>
             </div>
         </>
