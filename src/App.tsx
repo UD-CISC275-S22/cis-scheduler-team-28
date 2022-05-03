@@ -6,8 +6,8 @@ import defaultdegreeplan from "./data/defaultsemester.json";
 import mockdegreeplan from "./data/mockdata.json";
 import { Button, Col, Container, Form, Modal, Row } from "react-bootstrap";
 
-const DEFAULTDEGREEPLAN = defaultdegreeplan as DegreePlan;
-const MOCKDEGREEPLAN = mockdegreeplan as DegreePlan;
+const DEFAULTDEGREEPLAN = defaultdegreeplan as unknown as DegreePlan;
+const MOCKDEGREEPLAN = mockdegreeplan as unknown as DegreePlan;
 const DEGREEPLANLIST: DegreePlan[] = [DEFAULTDEGREEPLAN, MOCKDEGREEPLAN];
 
 function App(): JSX.Element {
@@ -17,7 +17,6 @@ function App(): JSX.Element {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    //const [pool, setPool] = useState<Course[]>([]);
 
     function updateDegreeplan(title: string) {
         const degreeplanIndex = degreeplanList.findIndex(
@@ -119,11 +118,6 @@ function App(): JSX.Element {
                     degreeplanList={degreeplanList}
                     setDegreeplanList={setDegreeplanList}
                 ></DegreePlanDisplay>
-            </div>
-            <div>
-                <Form.Group controlId="course-search">
-                    <Form.Label>Course Lookup:</Form.Label>
-                </Form.Group>
             </div>
         </div>
     );

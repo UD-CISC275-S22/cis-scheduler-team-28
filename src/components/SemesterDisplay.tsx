@@ -49,7 +49,7 @@ export function SemesterDisplay({
                                         <td>
                                             <p>Course Title: {course.title}</p>
                                             <p>
-                                                Course Prereqs: {course.prereq}
+                                                Course Prereqs: {course.preReq}
                                             </p>
                                         </td>
                                     </tr>

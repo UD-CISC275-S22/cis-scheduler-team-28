@@ -9,7 +9,7 @@
                     "title": "Intro to CS I",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["core"]
                 },
                 {
@@ -17,7 +17,7 @@
                     "title": "Intro to Engineering",
                     "description": "learn",
                     "credits": "2",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["COE", "univ"]
                 },
                 {
@@ -25,7 +25,7 @@
                     "title": "Seminar in Composition",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["core"]
                 },
                 {
@@ -33,7 +33,7 @@
                     "title": "Analytic Geometry and Calculus A",
                     "description": "learn",
                     "credits": "4",
-                    "prereq": ["MATH117/test in"],
+                    "preReq": "MATH117/test in",
                     "type": ["core"]
                 },
                 {
@@ -41,7 +41,7 @@
                     "title": "Topics in Art History",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["COE", "univA"]
                 }
             ]
@@ -54,7 +54,7 @@
                     "title": "Intro to Computer Science II",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC108"],
+                    "preReq": "CISC108",
                     "type": ["core"]
                 },
                 {
@@ -62,7 +62,7 @@
                     "title": "Intro to Systems Programming",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC108"],
+                    "preReq": "CISC108",
                     "type": ["core"]
                 },
                 {
@@ -70,7 +70,7 @@
                     "title": "Analytic Geometry and Calculus B",
                     "description": "learn",
                     "credits": "4",
-                    "prereq": ["MATH241"],
+                    "preReq": "MATH241",
                     "type": ["concentration"]
                 },
                 {
@@ -78,7 +78,7 @@
                     "title": "World History Since 1400",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["NA"],
+                    "preReq": "NA",
                     "type": ["COE", "univB", "univMC"]
                 },
                 {
@@ -86,7 +86,7 @@
                     "title": "Intro to American Politics",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["COE", "univC"]
                 }
             ]
@@ -99,7 +99,7 @@
                     "title": "Data Structures",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC210"],
+                    "preReq": "CISC210",
                     "type": ["core"]
                 },
                 {
@@ -107,7 +107,7 @@
                     "title": "Machine Organization and Assembly Language",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC210"],
+                    "preReq": "CISC210",
                     "type": ["core"]
                 },
                 {
@@ -115,7 +115,7 @@
                     "title": "Discrete Mathematics I",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["MATH241"],
+                    "preReq": "MATH241",
                     "type": ["core"]
                 },
                 {
@@ -123,7 +123,7 @@
                     "title": "Intro Bio I",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["core"]
                 },
                 {
@@ -131,7 +131,7 @@
                     "title": "Intro to Entrepreneurship",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["COE"]
                 }
             ]
@@ -144,7 +144,7 @@
                     "title": "Intro to Software Engineering",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC220"],
+                    "preReq": "CISC220",
                     "type": ["core"]
                 },
                 {
@@ -152,7 +152,7 @@
                     "title": "Computer, Ethics and Society",
                     "description": "learn",
                     "credits": 3,
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["core", "COE"]
                 },
                 {
@@ -160,7 +160,7 @@
                     "title": "Stat Methods",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["MATH210"],
+                    "preReq": "MATH210",
                     "type": ["concentration"]
                 },
                 {
@@ -168,7 +168,7 @@
                     "title": "Intro Bio II",
                     "description": "learn",
                     "credits": "4",
-                    "prereq": ["BISC207"],
+                    "preReq": "BISC207",
                     "type": ["core"]
                 },
                 {
@@ -176,7 +176,7 @@
                     "title": "Approaches to Lit",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["COE"]
                 }
             ]
@@ -189,7 +189,7 @@
                     "title": "Logic for Programming",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC220"],
+                    "preReq": "CISC220",
                     "type": ["concentration"]
                 },
                 {
@@ -197,7 +197,7 @@
                     "title": "Intro to Algs",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC220"],
+                    "preReq": "CISC220",
                     "type": ["core"]
                 },
                 {
@@ -205,7 +205,7 @@
                     "title": "Operating Systems",
                     "description": "learn",
                     "credits": 3,
-                    "prereq": ["CISC220", "CISC260"],
+                    "preReq": "CISC220 and CISC260",
                     "type": ["concentration"]
                 },
                 {
@@ -213,7 +213,7 @@
                     "title": "Intro to Linguistics",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["COE"]
                 },
                 {
@@ -221,7 +221,7 @@
                     "title": "Seminar: Assistive Tech",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["elective"]
                 }
             ]
@@ -234,7 +234,7 @@
                     "title": "Automata Theory",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC220"],
+                    "preReq": "CISC220",
                     "type": ["core"]
                 },
                 {
@@ -242,7 +242,7 @@
                     "title": "Intro to Computer Vision",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC220"],
+                    "preReq": "CISC220",
                     "type": ["concentration"]
                 },
                 {
@@ -250,7 +250,7 @@
                     "title": "Artificial Intelligence",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC220", "CISC304"],
+                    "preReq": "CISC220 and CISC304",
                     "type": ["concentration"]
                 },
                 {
@@ -258,7 +258,7 @@
                     "title": "Technical Writing",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["ENGL110"],
+                    "preReq": "ENGL110",
                     "type": ["core"]
                 },
                 {
@@ -266,7 +266,7 @@
                     "title": "Science of Language",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["LING101"],
+                    "preReq": "LING101",
                     "type": ["concentration"]
                 }
             ]
@@ -279,7 +279,7 @@
                     "title": "Intro to Data Mining",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC220", "MATH205"],
+                    "preReq": "CISC220 and MATH205",
                     "type": ["concentration"]
                 },
                 {
@@ -287,7 +287,7 @@
                     "title": "Senior Design Project I",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC275", "CISC320"],
+                    "preReq": "CISC275 and CISC320",
                     "type": ["core", "univ"]
                 },
                 {
@@ -295,7 +295,7 @@
                     "title": "Science of Language",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["LING101"],
+                    "preReq": "LING101",
                     "type": ["concentration"]
                 },
                 {
@@ -303,7 +303,7 @@
                     "title": "Intro to Disability Studies",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["elective"]
                 },
                 {
@@ -311,7 +311,7 @@
                     "title": "Photography for Non-Majors",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["elective"]
                 }
             ]
@@ -324,7 +324,7 @@
                     "title": "Intro to Machine Learning",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC220", "MATH205"],
+                    "preReq": "CISC220 and MATH205",
                     "type": ["concentration"]
                 },
                 {
@@ -332,7 +332,7 @@
                     "title": "Senior Design Project II",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["CISC498"],
+                    "preReq": "CISC498",
                     "type": ["core"]
                 },
                 {
@@ -340,7 +340,7 @@
                     "title": "Structure of Language",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["LING101"],
+                    "preReq": "LING101",
                     "type": ["concentration"]
                 },
                 {
@@ -348,7 +348,7 @@
                     "title": "Intro to Criminal Justice",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["elective"]
                 },
                 {
@@ -356,7 +356,7 @@
                     "title": "Classical Mythology: Gods, Heroes and Monsters",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": [],
+                    "preReq": "",
                     "type": ["elective"]
                 }
             ]

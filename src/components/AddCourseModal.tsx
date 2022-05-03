@@ -19,9 +19,9 @@ export function AddCourse({
         addCourse({
             code: "",
             title: "",
-            description: "",
+            descr: "",
             credits: "0",
-            prereq: [],
+            preReq: "",
             type: []
         });
         handleClose();

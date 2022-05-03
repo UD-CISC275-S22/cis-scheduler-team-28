@@ -12,10 +12,10 @@ export type CourseType =
 export interface Course {
     code: string;
     title: string;
-    description: string;
+    descr: string;
     credits: string;
-    prereq: string[];
-    type: CourseType[];
+    preReq: string;
+    type: string;
 }
 export function getCourseString(course: Course): string {
     return course.code + ": " + course.title;
