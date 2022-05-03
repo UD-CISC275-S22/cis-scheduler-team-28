@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Form, Modal, Row } from "react-bootstrap";
 import { DegreePlan } from "../interfaces/degreeplan";
 
@@ -13,7 +13,9 @@ export function EditDegreePlan({
     degreeplan: DegreePlan;
     setDegreeplan: (degreeplan: DegreePlan) => void;
 }) {
+    const [tempTitle, setTempTitle] = useState<string>(degreeplan.title);
     function saveChanges() {
+        setDegreeplan(setTitle(tempTitle));
         handleClose();
     }
     function setTitle(newTitle: string): DegreePlan {
@@ -31,10 +33,10 @@ export function EditDegreePlan({
                     </Form.Label>
                     <Col>
                         <Form.Control
-                            value={degreeplan.title}
+                            value={tempTitle}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => setDegreeplan(setTitle(event.target.value))}
+                            ) => setTempTitle(event.target.value)}
                         />
                     </Col>
                 </Form.Group>
