@@ -13,9 +13,6 @@ export function DegreePlanDisplay({
     function clearSemesters(degreeplan: DegreePlan) {
         setDegreeplan({ ...degreeplan, semesters: [] });
     }
-    function addPlan(degreeplan: DegreePlan, title: string) {
-        setDegreeplan({ ...degreeplan, semesters: [], [title]: title });
-    }
     /*function clearSemester(title: string, degreeplan: DegreePlan) {
         setDegreeplan(
             degreeplan.semesters.filter(
@@ -33,9 +30,6 @@ export function DegreePlanDisplay({
             ></SemesterDisplay>
             <Button onClick={() => clearSemesters(degreeplan)}>
                 Clear Semesters
-            </Button>
-            <Button onClick={() => addPlan(degreeplan, "Title")}>
-                Add a Plan
             </Button>
         </Container>
     );

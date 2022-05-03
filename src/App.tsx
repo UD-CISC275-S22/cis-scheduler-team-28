@@ -66,6 +66,33 @@ function App(): JSX.Element {
                                 Final Project Done By Lexi Anderson and Sarah
                                 Kimak
                             </p>
+                            <p></p>
+                            <Button className="Req-info" onClick={handleOpen}>
+                                Requirements
+                            </Button>
+                            <Modal show={open} onHide={handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>
+                                        About Requirements
+                                    </Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    Each degree plan has a variety of
+                                    requirement categories and certain courses
+                                    that fulfill them. They are listed within
+                                    the table to display what each course counts
+                                    for with a variety of shorthand codes.
+                                    Courses that appear to have many things
+                                    listed COE is college of engineering, univ
+                                    is a University fulfillment, univA/B/etc
+                                    means it fulfills that category of a breadth
+                                    requirement, core and concentration are
+                                    within the CS major, and electives are free
+                                    courses all up to you!
+                                </Modal.Body>
+                                <Modal.Footer></Modal.Footer>
+                            </Modal>
+                            <p></p>
                         </Col>
                     </Row>
                 </Container>

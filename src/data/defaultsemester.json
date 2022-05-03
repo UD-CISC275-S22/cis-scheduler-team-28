@@ -78,7 +78,7 @@
                     "title": "Multicultural and Historical Breadth",
                     "description": "learn",
                     "credits": "3",
-                    "prereq": ["NA"],
+                    "prereq": [],
                     "type": ["COE", "univB", "univMC"]
                 },
                 {
