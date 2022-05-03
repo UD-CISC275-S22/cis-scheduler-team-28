@@ -11,7 +11,8 @@ const MOCKDEGREEPLAN = mockdegreeplan as DegreePlan;
 const DEGREEPLANLIST: DegreePlan[] = [DEFAULTDEGREEPLAN, MOCKDEGREEPLAN];
 
 function App(): JSX.Element {
-    const [degreeplanList] = useState<DegreePlan[]>(DEGREEPLANLIST);
+    const [degreeplanList, setDegreeplanList] =
+        useState<DegreePlan[]>(DEGREEPLANLIST);
     const [degreeplan, setDegreeplan] = useState<DegreePlan>(degreeplanList[0]);
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -115,7 +116,8 @@ function App(): JSX.Element {
                 <DegreePlanDisplay
                     degreeplan={degreeplan}
                     setDegreeplan={setDegreeplan}
-                    show={open}
+                    degreeplanList={degreeplanList}
+                    setDegreeplanList={setDegreeplanList}
                 ></DegreePlanDisplay>
             </div>
             <div>

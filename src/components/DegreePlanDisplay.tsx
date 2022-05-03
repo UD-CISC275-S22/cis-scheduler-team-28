@@ -6,11 +6,14 @@ import { EditDegreePlan } from "./EditDegreePlan";
 
 export function DegreePlanDisplay({
     degreeplan,
-    setDegreeplan
+    setDegreeplan,
+    degreeplanList,
+    setDegreeplanList
 }: {
     degreeplan: DegreePlan;
     setDegreeplan: (degreeplan: DegreePlan) => void;
-    show: boolean;
+    degreeplanList: DegreePlan[];
+    setDegreeplanList: (degreeplanList: DegreePlan[]) => void;
 }): JSX.Element {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -38,6 +41,8 @@ export function DegreePlanDisplay({
                 handleClose={handleClose}
                 degreeplan={degreeplan}
                 setDegreeplan={setDegreeplan}
+                degreeplanList={degreeplanList}
+                setDegreeplanList={setDegreeplanList}
             ></EditDegreePlan>
             <p></p>
         </Container>
