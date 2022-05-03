@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Modal, Table } from "react-bootstrap";
+import { Button, Container, Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import { DegreePlan } from "../interfaces/degreeplan";

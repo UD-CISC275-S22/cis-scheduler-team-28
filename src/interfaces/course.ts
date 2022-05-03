@@ -17,3 +17,6 @@ export interface Course {
     prereq: string[];
     type: CourseType[];
 }
+export function getCourseString(course: Course): string {
+    return course.code + ": " + course.title;
+}
