@@ -5,6 +5,7 @@ import { DegreePlanDisplay } from "./components/DegreePlanDisplay";
 import defaultdegreeplan from "./data/defaultsemester.json";
 import mockdegreeplan from "./data/mockdata.json";
 import { Button, Col, Container, Form, Modal, Row } from "react-bootstrap";
+import { CatalogCourses } from "./components/CatalogCourses";
 
 const DEFAULTDEGREEPLAN = defaultdegreeplan as unknown as DegreePlan;
 const MOCKDEGREEPLAN = mockdegreeplan as unknown as DegreePlan;
@@ -118,6 +119,15 @@ function App(): JSX.Element {
                     degreeplanList={degreeplanList}
                     setDegreeplanList={setDegreeplanList}
                 ></DegreePlanDisplay>
+            </div>
+            <div>
+                <Container>
+                    <Row>
+                        <Col xs={4}>
+                            <CatalogCourses></CatalogCourses>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div>
     );

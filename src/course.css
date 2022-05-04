@@ -1,0 +1,21 @@
+.boxed {
+    border: 2px solid black;
+}
+
+.pool {
+    height: 500px;
+    width: 415 px;
+    background-color: rgb(163, 161, 161);
+    overflow-y: auto;
+}
+
+.semesterCourses {
+    height: 600px;
+    width: 600px;
+    background-color: rgb(163, 161, 161);
+}
+
+.planViewer {
+    height: 800px;
+    overflow-y: auto;
+}
