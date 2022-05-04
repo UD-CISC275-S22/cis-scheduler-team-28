@@ -126,6 +126,9 @@ function App(): JSX.Element {
                         <Col xs={4}>
                             <CatalogCourses></CatalogCourses>
                         </Col>
+                        <Col>
+                            <h3>Course Pool:</h3>
+                        </Col>
                     </Row>
                 </Container>
             </div>
