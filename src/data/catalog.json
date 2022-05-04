@@ -988,7 +988,7 @@
         "title": "Statistical Methods",
         "descr": "Descriptive statistics, graphical displays, sampling, variation, normal distribution, estimation, hypothesis testing, one-way analysis of variance, simple linear regression and goodness of fit. Laboratory covers use of statistical packages on mainframe and microcomputers.",
         "credits": " 4",
-        "preReq": ["MATH 210 or MATH 230."],
+        "preReq": "MATH 210 or MATH 230.",
         "type": "core"
     },
     {
