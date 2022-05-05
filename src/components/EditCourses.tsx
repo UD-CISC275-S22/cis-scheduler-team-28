@@ -21,9 +21,9 @@ export function EditCourses({
     editCourse: (id: string, newCourse: Course) => void;
     changeEditMode: () => void;
 }): JSX.Element {
-    const [newCode, setNewCode] = useState<string>(code);
-    const [newTitle, setNewTitle] = useState<string>(title);
-    const [newCredits, setNewCredits] = useState<string>(credits);
+    const [newCode, setCode] = useState<string>(code);
+    const [newTitle, setTitle] = useState<string>(title);
+    const [newCredits, setCredits] = useState<string>(credits);
 
     function save() {
         if (code) {
@@ -56,11 +56,11 @@ export function EditCourses({
                                     value={newTitle}
                                     onChange={(
                                         event: React.ChangeEvent<HTMLInputElement>
-                                    ) => setNewTitle(event.target.value)}
+                                    ) => setTitle(event.target.value)}
                                 />
                             </Col>
                         </Form.Group>
-                        <Form.Group controlId="formClassCode" as={Row}>
+                        <Form.Group controlId="formCourseCode" as={Row}>
                             <Form.Label column sm={2}>
                                 Code:
                             </Form.Label>
@@ -69,21 +69,20 @@ export function EditCourses({
                                     value={newCode}
                                     onChange={(
                                         event: React.ChangeEvent<HTMLInputElement>
-                                    ) => setNewCode(event.target.value)}
+                                    ) => setCode(event.target.value)}
                                 />
                             </Col>
                         </Form.Group>
-                        <Form.Group controlID="formCourseCredits" as={Row}>
+                        <Form.Group controlId="formCourseCredits" as={Row}>
                             <Form.Label column sm={2}>
                                 Credits:
                             </Form.Label>
                             <Col>
                                 <Form.Control
-                                    type="number"
                                     value={newCredits}
                                     onChange={(
                                         event: React.ChangeEvent<HTMLInputElement>
-                                    ) => setNewCredits(event.target.value)}
+                                    ) => setCredits(event.target.value)}
                                 />
                             </Col>
                         </Form.Group>

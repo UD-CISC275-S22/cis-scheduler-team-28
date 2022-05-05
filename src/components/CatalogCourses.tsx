@@ -39,11 +39,11 @@ export function CatalogCourses(): JSX.Element {
     const courseInfo = COURSES.find(
         (course: Course): boolean => course.code == chosenCourse
     );
-    function editCourse(id: string, newCourse: Course) {
+    function editCourse(title: string, newCourse: Course) {
         setCourseList(
             courseList.map(
                 (course: Course): Course =>
-                    course.code === id ? newCourse : course
+                    course.code === title ? newCourse : course
             )
         );
     }
