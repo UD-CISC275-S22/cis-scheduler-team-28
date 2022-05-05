@@ -60,9 +60,8 @@ export function CatalogCourses(): JSX.Element {
         ></EditCourses>
     ) : (
         <div>
-            <h3>CISC Related Courses</h3>
+            <h3>CISC Related Catalog:</h3>
             <Form.Group controlId="chosenClass">
-                <Form.Label>Choose a Course</Form.Label>
                 <Form.Select value={chosenCourse} onChange={updateCourse}>
                     {courseList.map((course: Course) => (
                         <option key={course.code} value={course.code}>

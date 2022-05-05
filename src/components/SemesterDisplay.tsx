@@ -47,9 +47,13 @@ export function SemesterDisplay({
                                         <td>{course.type}</td>
                                         <td>{course.credits}</td>
                                         <td>
-                                            <p>Course Title: {course.title}</p>
                                             <p>
-                                                Course Prereqs: {course.preReq}
+                                                <b>Course Title: </b>
+                                                {course.title}
+                                            </p>
+                                            <p>
+                                                <b>Course Prereqs:</b>{" "}
+                                                {course.preReq}
                                             </p>
                                         </td>
                                     </tr>

@@ -16,11 +16,22 @@ export function CourseDisplay({
             <div>
                 <span>
                     <h5>{chosenCourse.title}</h5>
-                    <p>Code: {chosenCourse.code}</p>
-                    <p>Credits: {chosenCourse.credits}</p>
-                    <p>Requirement Fulfilled: {chosenCourse.type}</p>
-                    <p>PreReqs: {chosenCourse.preReq}</p>
-                    <p>Description: {chosenCourse.descr}</p>
+                    <p>
+                        <b>Code:</b> {chosenCourse.code}
+                    </p>
+                    <p>
+                        <b>Credits: </b>
+                        {chosenCourse.credits}
+                    </p>
+                    <p>
+                        <b>Requirement Fulfilled:</b> {chosenCourse.type}
+                    </p>
+                    <p>
+                        <b>Prereqs:</b> {chosenCourse.preReq}
+                    </p>
+                    <p>
+                        <b>Description:</b> {chosenCourse.descr}
+                    </p>
                 </span>
             </div>
         );
