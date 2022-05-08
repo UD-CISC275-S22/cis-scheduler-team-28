@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Container } from "react-bootstrap";
 import { SemesterDisplay } from "./SemesterDisplay";
 import { DegreePlan } from "../interfaces/degreeplan";
@@ -18,8 +18,19 @@ export function DegreePlanDisplay({
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const [chosenPlan, setChosenPlan] = useState<string>(
+        degreeplanList[0].title
+    );
     function clearSemesters(degreeplan: DegreePlan) {
         setDegreeplan({ ...degreeplan, semesters: [] });
+    }
+    function deletePlan(id: string) {
+        setDegreeplanList(
+            degreeplanList.filter(
+                (degreeplan: DegreePlan): boolean => degreeplan.title !== id
+            )
+        );
+        setChosenPlan(degreeplanList[0].title);
     }
 
     return (
@@ -45,6 +56,7 @@ export function DegreePlanDisplay({
                 setDegreeplanList={setDegreeplanList}
             ></EditDegreePlan>
             <p></p>
+            <Button onClick={() => deletePlan(chosenPlan)}>Delete Plan</Button>
         </Container>
     );
 }
