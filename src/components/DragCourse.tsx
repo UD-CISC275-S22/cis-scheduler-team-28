@@ -14,9 +14,21 @@ export const DragCourse = ({ course }: { course: Course }) => {
         <div className="boxed" ref={drag}>
             <span>
                 <h5>{course.title}</h5>
-                <p>Code: {course.code}</p>
-                <p>Credits: {course.credits}</p>
-                <p>PreReqs: {course.preReq}</p>
+                <p>
+                    <b>Code: </b> {course.code}
+                </p>
+                <p>
+                    <b>Credits: </b> {course.credits}
+                </p>
+                <p>
+                    <b>Requirement Fulfilled: </b> {course.type}
+                </p>
+                <p>
+                    <b>Prereqs: </b> {course.preReq}
+                </p>
+                <p>
+                    <b>Description: </b> {course.descr}
+                </p>
             </span>
         </div>
     );
