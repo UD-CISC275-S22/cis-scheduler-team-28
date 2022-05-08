@@ -30,7 +30,7 @@ export function DegreePlanDisplay({
                 (degreeplan: DegreePlan): boolean => degreeplan.title !== id
             )
         );
-        setChosenPlan(degreeplanList[0].title);
+        setChosenPlan(degreeplanList[1].title);
     }
 
     return (
@@ -61,7 +61,7 @@ export function DegreePlanDisplay({
                 ></EditDegreePlan>
                 <Col>
                     <Button onClick={() => deletePlan(chosenPlan)}>
-                        Delete Delete Plan
+                        Delete Degree Plan
                     </Button>
                 </Col>
             </Row>
