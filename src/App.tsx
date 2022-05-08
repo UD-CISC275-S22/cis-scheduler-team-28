@@ -131,7 +131,10 @@ function App(): JSX.Element {
                         </Col>
                         <Col>
                             <h3>Course Pool:</h3>
-                            <DndProvider backend={HTML5Backend}>
+                            <DndProvider
+                                debugMode={true}
+                                backend={HTML5Backend}
+                            >
                                 <CoursePool></CoursePool>
                             </DndProvider>
                         </Col>
