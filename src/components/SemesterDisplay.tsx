@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Table } from "react-bootstrap";
+import { Button, Container, Form, Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import { DegreePlan } from "../interfaces/degreeplan";
@@ -38,6 +38,7 @@ export function SemesterDisplay({
                                     <th>Requirement</th>
                                     <th>Credits</th>
                                     <th>Course Info</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -55,6 +56,13 @@ export function SemesterDisplay({
                                                 <b>Course Prereqs:</b>{" "}
                                                 {course.preReq}
                                             </p>
+                                        </td>
+                                        <td>
+                                            <Form.Check
+                                                type="checkbox"
+                                                name="courses"
+                                                label={"Completed"}
+                                            />
                                         </td>
                                     </tr>
                                 ))}
