@@ -89,7 +89,7 @@ function App(): JSX.Element {
                             <p></p>
                             <p>
                                 Final Project Done By Lexi Anderson and Sarah
-                                Kimak
+                                Kimak :)
                             </p>
                         </Col>
                     </Row>
