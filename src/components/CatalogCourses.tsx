@@ -4,6 +4,8 @@ import { Course } from "../interfaces/course";
 import catalog from "../data/catalog.json";
 import { EditCourses } from "./EditCourses";
 import { CourseDisplay } from "./CourseDisplay";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 type ChangeEvent = React.ChangeEvent<
     HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
@@ -70,7 +72,9 @@ export function CatalogCourses(): JSX.Element {
                     ))}
                 </Form.Select>
             </Form.Group>
-            <CourseDisplay chosenCourse={courseInfo}></CourseDisplay>
+            <DndProvider backend={HTML5Backend}>
+                <CourseDisplay chosenCourse={courseInfo}></CourseDisplay>
+            </DndProvider>
             <Button onClick={changeEditMode}>Edit Course</Button>
             <Button onClick={() => deleteCourse(chosenCourse)}>
                 Delete Course

@@ -1,5 +1,6 @@
 import React from "react";
 import { Course } from "../interfaces/course";
+import { DragCourse } from "./DragCourse";
 export function CourseDisplay({
     chosenCourse
 }: {
@@ -12,28 +13,6 @@ export function CourseDisplay({
             </div>
         );
     } else {
-        return (
-            <div>
-                <span>
-                    <h5>{chosenCourse.title}</h5>
-                    <p>
-                        <b>Code:</b> {chosenCourse.code}
-                    </p>
-                    <p>
-                        <b>Credits: </b>
-                        {chosenCourse.credits}
-                    </p>
-                    <p>
-                        <b>Requirement Fulfilled:</b> {chosenCourse.type}
-                    </p>
-                    <p>
-                        <b>Prereqs:</b> {chosenCourse.preReq}
-                    </p>
-                    <p>
-                        <b>Description:</b> {chosenCourse.descr}
-                    </p>
-                </span>
-            </div>
-        );
+        return <DragCourse course={chosenCourse}></DragCourse>;
     }
 }
