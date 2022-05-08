@@ -6,6 +6,9 @@ import defaultdegreeplan from "./data/defaultsemester.json";
 import mockdegreeplan from "./data/mockdata.json";
 import { Button, Col, Container, Form, Modal, Row } from "react-bootstrap";
 import { CatalogCourses } from "./components/CatalogCourses";
+import { DndProvider } from "react-dnd";
+import { CoursePool } from "./components/CoursePool";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 const DEFAULTDEGREEPLAN = defaultdegreeplan as unknown as DegreePlan;
 const MOCKDEGREEPLAN = mockdegreeplan as unknown as DegreePlan;
@@ -128,6 +131,9 @@ function App(): JSX.Element {
                         </Col>
                         <Col>
                             <h3>Course Pool:</h3>
+                            <DndProvider backend={HTML5Backend}>
+                                <CoursePool></CoursePool>
+                            </DndProvider>
                         </Col>
                     </Row>
                 </Container>
