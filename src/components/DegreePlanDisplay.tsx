@@ -18,19 +18,8 @@ export function DegreePlanDisplay({
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const [chosenPlan, setChosenPlan] = useState<string>(
-        degreeplanList[0].title
-    );
     function clearSemesters(degreeplan: DegreePlan) {
         setDegreeplan({ ...degreeplan, semesters: [] });
-    }
-    function deletePlan(id: string) {
-        setDegreeplanList(
-            degreeplanList.filter(
-                (degreeplan: DegreePlan): boolean => degreeplan.title !== id
-            )
-        );
-        setChosenPlan(degreeplanList[1].title);
     }
 
     return (
@@ -59,11 +48,6 @@ export function DegreePlanDisplay({
                     degreeplanList={degreeplanList}
                     setDegreeplanList={setDegreeplanList}
                 ></EditDegreePlan>
-                <Col>
-                    <Button onClick={() => deletePlan(chosenPlan)}>
-                        Delete Degree Plan
-                    </Button>
-                </Col>
             </Row>
         </Container>
     );

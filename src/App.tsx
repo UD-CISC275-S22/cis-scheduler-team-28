@@ -89,58 +89,53 @@ function App(): JSX.Element {
                             <p></p>
                             <p>
                                 Final Project Done By Lexi Anderson and Sarah
-                                Kimak :)
+                                Kimak
                             </p>
                         </Col>
                     </Row>
                 </Container>
             </header>
-            <div>
-                <Form.Group controlId="chosen-degreeplan">
-                    <Form.Label>Choose Degree Plan to Display:</Form.Label>
-                    <Form.Select
-                        value={degreeplan.title}
-                        onChange={(
-                            event: React.ChangeEvent<HTMLSelectElement>
-                        ) => updateDegreeplan(event.target.value)}
-                    >
-                        {degreeplanList.map((degreeplan: DegreePlan) => (
-                            <option
-                                key={degreeplan.title}
+            <Container>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="chosen-degreeplan">
+                            <Form.Label>
+                                Choose Degree Plan to Display:
+                            </Form.Label>
+                            <Form.Select
                                 value={degreeplan.title}
+                                onChange={(
+                                    event: React.ChangeEvent<HTMLSelectElement>
+                                ) => updateDegreeplan(event.target.value)}
                             >
-                                {degreeplan.title}
-                            </option>
-                        ))}
-                    </Form.Select>
-                </Form.Group>
-            </div>
-            <div>
-                <DegreePlanDisplay
-                    degreeplan={degreeplan}
-                    setDegreeplan={setDegreeplan}
-                    degreeplanList={degreeplanList}
-                    setDegreeplanList={setDegreeplanList}
-                ></DegreePlanDisplay>
-            </div>
-            <div>
-                <Container>
-                    <Row>
-                        <Col xs={4}>
-                            <CatalogCourses></CatalogCourses>
-                        </Col>
-                        <Col>
-                            <h3>Course Pool:</h3>
-                            <DndProvider
-                                debugMode={true}
-                                backend={HTML5Backend}
-                            >
-                                <CoursePool></CoursePool>
-                            </DndProvider>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+                                {degreeplanList.map(
+                                    (degreeplan: DegreePlan) => (
+                                        <option
+                                            key={degreeplan.title}
+                                            value={degreeplan.title}
+                                        >
+                                            {degreeplan.title}
+                                        </option>
+                                    )
+                                )}
+                            </Form.Select>
+                        </Form.Group>
+                        <DegreePlanDisplay
+                            degreeplan={degreeplan}
+                            setDegreeplan={setDegreeplan}
+                            degreeplanList={degreeplanList}
+                            setDegreeplanList={setDegreeplanList}
+                        ></DegreePlanDisplay>
+                    </Col>
+                    <Col>
+                        <CatalogCourses></CatalogCourses>
+                        <h3>Course Pool:</h3>
+                        <DndProvider debugMode={true} backend={HTML5Backend}>
+                            <CoursePool></CoursePool>
+                        </DndProvider>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 }
