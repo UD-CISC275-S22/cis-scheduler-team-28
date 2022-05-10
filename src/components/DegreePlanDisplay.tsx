@@ -1,8 +1,8 @@
-import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { SemesterDisplay } from "./SemesterDisplay";
 import { DegreePlan } from "../interfaces/degreeplan";
 import { EditDegreePlan } from "./EditDegreePlan";
+import React from "react";
 
 export function DegreePlanDisplay({
     degreeplan,
