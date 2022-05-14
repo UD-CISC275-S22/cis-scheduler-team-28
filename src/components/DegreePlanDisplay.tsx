@@ -26,10 +26,6 @@ export function DegreePlanDisplay({
         <Container>
             <Row>
                 <h1>{degreeplan.title}</h1>
-                <SemesterDisplay
-                    degreeplan={degreeplan}
-                    setDegreeplan={setDegreeplan}
-                ></SemesterDisplay>
                 <Col>
                     <Button onClick={() => clearSemesters(degreeplan)}>
                         Clear Semesters
@@ -40,6 +36,10 @@ export function DegreePlanDisplay({
                         Edit Degree Plan
                     </Button>
                 </Col>
+                <SemesterDisplay
+                    degreeplan={degreeplan}
+                    setDegreeplan={setDegreeplan}
+                ></SemesterDisplay>
                 <EditDegreePlan
                     show={open}
                     handleClose={handleClose}

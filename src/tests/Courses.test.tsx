@@ -12,7 +12,7 @@ describe("Course tests", () => {
         render(<CatalogCourses />);
         const selected = screen.getByRole("combobox");
         userEvent.selectOptions(selected, "CISC 101");
-        expect(screen.getByText(/Code: CISC 101/i)).toBeInTheDocument();
+        expect(screen.queryByText(/CISC 101/i)).toBeInTheDocument();
         expect(
             screen.getByText(/Title: Principles of Computing/i)
         ).toBeInTheDocument();
