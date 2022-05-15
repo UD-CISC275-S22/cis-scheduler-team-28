@@ -12,10 +12,15 @@ describe("Course tests", () => {
         render(<CatalogCourses />);
         const selected = screen.getByRole("combobox");
         userEvent.selectOptions(selected, "CISC 101");
-        expect(screen.queryByText(/CISC 101/i)).toBeInTheDocument();
         expect(
             screen.getByText(/Title: Principles of Computing/i)
         ).toBeInTheDocument();
         expect(screen.getByText(/Credits: 3/i)).toBeInTheDocument();
+    });
+    test("Courses can be deleted", () => {
+        const deleteButton = screen.getByRole("button", { name: "Delete" });
+        expect(deleteButton).toBeInTheDocument();
+        deleteButton.click();
+        expect(screen.queryByText("CISC101")).not.toBeInTheDocument();
     });
 });

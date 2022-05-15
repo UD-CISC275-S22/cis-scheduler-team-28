@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
+
 describe("Degree Plan tests", () => {
     beforeEach(() => {
         render(<App />);
@@ -54,5 +55,15 @@ describe("Degree Plan tests", () => {
         clearSems.click();
         const sem1 = screen.queryByTestId("SemesterDisplay");
         expect(sem1).not.toBeInTheDocument();
+    });
+    test("There is a drop down to switch between plans", () => {
+        render(<App />);
+        expect(screen.getByRole("combobox")).toBeInTheDocument();
+    });
+    test("Selected degree plan is displayed", () => {
+        render(<App />);
+        const selectedPlan = screen.getByRole("combobox");
+        userEvent.selectOptions(selectedPlan, "CS BS AI");
+        expect(screen.queryByText(/CS BS AI/i)).toBeInTheDocument();
     });
 });
