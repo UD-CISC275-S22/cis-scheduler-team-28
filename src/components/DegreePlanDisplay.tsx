@@ -40,21 +40,19 @@ export function DegreePlanDisplay({
                         Add Plan
                     </Button>
                 </Col>
-                <Col>
-                    <Button className="add-semester" onClick={handleOpen}>
-                        Add Semester
-                    </Button>
-                </Col>
-                <SemesterDisplay
-                    degreeplanList={degreeplanList}
-                    setDegreeplanList={setDegreeplanList}
-                ></SemesterDisplay>
                 <AddDegreePlan
                     show={open}
                     handleClose={handleClose}
                     degreeplanList={degreeplanList}
                     setDegreeplanList={setDegreeplanList}
                 ></AddDegreePlan>
+            </Row>
+            <Row>
+                <Col>
+                    <Button className="add-semester" onClick={handleOpen}>
+                        Add Semester
+                    </Button>
+                </Col>
                 <AddSemester
                     show={open}
                     handleClose={handleClose}
@@ -62,6 +60,13 @@ export function DegreePlanDisplay({
                     setDegreeplanList={setDegreeplanList}
                 ></AddSemester>
             </Row>
+            <SemesterDisplay
+                show={open}
+                handleOpen={handleOpen}
+                handleClose={handleClose}
+                degreeplanList={degreeplanList}
+                setDegreeplanList={setDegreeplanList}
+            ></SemesterDisplay>
         </Container>
     );
 }

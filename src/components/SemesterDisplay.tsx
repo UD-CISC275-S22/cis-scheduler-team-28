@@ -1,14 +1,21 @@
 import React from "react";
-import { Button, Container, Form, Table } from "react-bootstrap";
+import { Button, Container, Form, Table, Col } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import { DegreePlan } from "../interfaces/degreeplan";
+import { AddCourse } from "./AddCourse";
 import { v4 as uuid } from "uuid";
 
 export function SemesterDisplay({
+    show,
+    handleOpen,
+    handleClose,
     degreeplanList,
     setDegreeplanList
 }: {
+    show: boolean;
+    handleOpen: () => void;
+    handleClose: () => void;
     degreeplanList: DegreePlan[];
     setDegreeplanList: (degreeplanList: DegreePlan[]) => void;
 }): JSX.Element {
@@ -75,9 +82,16 @@ export function SemesterDisplay({
                         </Table>
                     </Container>
                     <div>
-                        <Button onClick={() => clearCourses(semester.title)}>
-                            Clear Courses
-                        </Button>
+                        <Col>
+                            <Button
+                                onClick={() => clearCourses(semester.title)}
+                            >
+                                Clear Courses
+                            </Button>
+                        </Col>
+                        <Col>
+                            <Button onClick={handleOpen}>Add Course</Button>
+                        </Col>
                     </div>
                 </>
             ))}
