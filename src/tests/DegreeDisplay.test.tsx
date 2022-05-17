@@ -22,4 +22,21 @@ describe("DegreeDisplay tests", () => {
         const AddPlan = screen.getByTestId("AddPlan");
         expect(AddPlan).toBeInTheDocument();
     });
+    test("Clear Semesters button works", () => {
+        const clearSemButton = screen.getByTestId("ClearSemButton");
+        clearSemButton.click();
+        const semDisplay = screen.queryByTestId("SemDisplay");
+        expect(semDisplay).not.toBeInTheDocument();
+    });
+    /*
+    test("Can view remaining info in course pool", () => {
+        const courses = screen.getAllByTestId("courseview");
+        expect(courses).toHaveLength(3);
+        courses[0].click();
+        const deletecoursebutton = screen.getAllByTestId("deletecoursebutton");
+        fireEvent.click(deletecoursebutton[0]);
+        const courses2 = screen.queryAllByTestId("courseview");
+        expect(courses2).toHaveLength(2);
+    });
+    */
 });

@@ -34,7 +34,10 @@ export function DegreePlanDisplay({
             <Row>
                 <h1>{degreeplanList[0].title}</h1>
                 <Col>
-                    <Button onClick={() => clearSemesters()}>
+                    <Button
+                        onClick={() => clearSemesters()}
+                        data-testid="ClearSemButton"
+                    >
                         Clear Semesters
                     </Button>
                 </Col>
@@ -72,6 +75,7 @@ export function DegreePlanDisplay({
                 ></AddSemester>
             </Row>
             <SemesterDisplay
+                data-testid="SemDisplay"
                 degreeplanList={degreeplanList}
                 setDegreeplanList={setDegreeplanList}
             ></SemesterDisplay>

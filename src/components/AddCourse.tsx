@@ -68,7 +68,11 @@ export function AddCourse({
                 <Modal.Title>Add New Course {currSemester}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Form.Group controlId="AddCourse" as={Row}>
+                <Form.Group
+                    controlId="AddCourse"
+                    as={Row}
+                    data-testid="AddCourse"
+                >
                     <Row>
                         <Form.Label column sm={3}>
                             Course Code:
