@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button, Col, Form, Modal, Row } from "react-bootstrap";
-import { isTemplateMiddle } from "typescript";
 import { DegreePlan } from "../interfaces/degreeplan";
 
 export function AddDegreePlan({
