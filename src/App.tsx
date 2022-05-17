@@ -22,16 +22,19 @@ function App(): JSX.Element {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
+    function switchPlaces(index: number): DegreePlan[] {
+        const tempList = [...degreeplanList];
+        const temp = tempList[0];
+        tempList[0] = tempList[index];
+        tempList[index] = temp;
+        return tempList;
+    }
+
     function updateDegreeplan(title: string) {
         const degreeplanIndex = degreeplanList.findIndex(
             (degreeplan: DegreePlan): boolean => degreeplan.title === title
         );
-        setDegreeplanList(
-            ([degreeplanList[0], degreeplanList[degreeplanIndex]] = [
-                degreeplanList[degreeplanIndex],
-                degreeplanList[0]
-            ])
-        );
+        setDegreeplanList(switchPlaces(degreeplanIndex));
     }
 
     return (
