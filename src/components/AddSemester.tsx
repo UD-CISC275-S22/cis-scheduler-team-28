@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, Col, Form, Modal, Row } from "react-bootstrap";
 import { DegreePlan } from "../interfaces/degreeplan";
 import { Semester } from "../interfaces/semester";
-import { SemesterDisplay } from "./SemesterDisplay";
 
 export function AddSemester({
     show,
