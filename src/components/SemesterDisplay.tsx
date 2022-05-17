@@ -13,8 +13,14 @@ export function SemesterDisplay({
     degreeplanList: DegreePlan[];
     setDegreeplanList: (degreeplanList: DegreePlan[]) => void;
 }): JSX.Element {
+    const [currSemester, setCurrSemester] = React.useState(
+        degreeplanList[0].semesters[0]
+    );
     const [openCourse, setOpenCourse] = React.useState(false);
-    const handleOpenCourse = () => setOpenCourse(true);
+    function handleOpenCourse(semester: Semester) {
+        setCurrSemester(semester);
+        setOpenCourse(true);
+    }
     const handleCloseCourse = () => setOpenCourse(false);
     function makeEmptySem(
         originalPlan: DegreePlan,
@@ -96,22 +102,23 @@ export function SemesterDisplay({
                         </Col>
                         <Col>
                             <Button
-                                onClick={handleOpenCourse}
+                                onClick={() => handleOpenCourse(semester)}
                                 data-testid="AddCourseModal"
                             >
-                                Add Course
+                                Add Course {semester.title}
                             </Button>
-                            <AddCourse
-                                show={openCourse}
-                                handleClose={handleCloseCourse}
-                                currSemester={semester.title}
-                                degreeplanList={degreeplanList}
-                                setDegreeplanList={setDegreeplanList}
-                            ></AddCourse>
                         </Col>
                     </div>
                 </>
             ))}
+            <AddCourse
+                show={openCourse}
+                handleClose={handleCloseCourse}
+                currSemester={currSemester.title}
+                degreeplanList={degreeplanList}
+                setDegreeplanList={setDegreeplanList}
+            ></AddCourse>
+            ;
         </Container>
     );
 }
