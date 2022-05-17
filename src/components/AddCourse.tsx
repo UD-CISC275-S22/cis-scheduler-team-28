@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import { Button, Col, Form, Modal, Row } from "react-bootstrap";
+import { Course } from "../interfaces/course";
 import { DegreePlan } from "../interfaces/degreeplan";
 import { Semester } from "../interfaces/semester";
-import { CourseDisplay } from "./CourseDisplay";
-import { SemesterDisplay } from "./SemesterDisplay";
 
 export function AddCourse({
     show,
     handleClose,
+    currSemester,
     degreeplanList,
     setDegreeplanList
 }: {
     show: boolean;
     handleClose: () => void;
+    currSemester: string;
     degreeplanList: DegreePlan[];
     setDegreeplanList: (degreeplanList: DegreePlan[]) => void;
 }) {
@@ -22,13 +23,33 @@ export function AddCourse({
     const [tempCredits, setTempCredits] = useState<string>("");
     const [tempPrereq, setTempPrereq] = useState<string>("");
     const [tempType, setTempType] = useState<string>("");
-    function saveChanges(semtitle: Semester) {
+    function addNewCourse(originalSem: Semester, newCourse: Course): Semester {
+        return {
+            ...originalSem,
+            courses: [...originalSem.courses, newCourse]
+        };
+    }
+    function addNewSem(
+        originalPlan: DegreePlan,
+        newCourse: Course
+    ): DegreePlan {
+        return {
+            ...originalPlan,
+            semesters: originalPlan.semesters.map(
+                (originalSem: Semester): Semester =>
+                    originalSem.title !== currSemester
+                        ? originalSem
+                        : addNewCourse(originalSem, newCourse)
+            )
+        };
+    }
+    function saveChanges() {
         const newCourse = {
             code: tempCode,
             title: tempTitle,
             descr: tempDescr,
             credits: tempCredits,
-            prereq: tempPrereq,
+            preReq: tempPrereq,
             type: tempType
         };
         setDegreeplanList(
@@ -36,21 +57,7 @@ export function AddCourse({
                 (originalPlan: DegreePlan, index): DegreePlan =>
                     index !== 0
                         ? originalPlan
-                        : {
-                              ...originalPlan,
-                              semesters: originalPlan.semesters.map(
-                                  (originalSem: Semester): Semester =>
-                                      originalSem.title !== semtitle
-                                          ? originalSem
-                                          : {
-                                                ...originalSem,
-                                                courses: [
-                                                    ...originalSem.courses,
-                                                    newCourse
-                                                ]
-                                            }
-                              )
-                          }
+                        : addNewSem(originalPlan, newCourse)
             )
         );
         handleClose();
@@ -58,7 +65,7 @@ export function AddCourse({
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
-                <Modal.Title>Add New Course</Modal.Title>
+                <Modal.Title>Add New Course {currSemester}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form.Group controlId="AddCourse" as={Row}>

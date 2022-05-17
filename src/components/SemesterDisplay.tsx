@@ -99,6 +99,7 @@ export function SemesterDisplay({
                             <AddCourse
                                 show={openCourse}
                                 handleClose={handleCloseCourse}
+                                currSemester={semester.title}
                                 degreeplanList={degreeplanList}
                                 setDegreeplanList={setDegreeplanList}
                             ></AddCourse>
