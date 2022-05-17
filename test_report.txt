@@ -2,6 +2,43 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
+PASS src/tests/DegreeDisplay.test.tsx
+  ● Console
+
+    console.error
+      Warning: Each child in a list should have a unique "key" prop.
+      
+      Check the render method of `SemesterDisplay`. See https://reactjs.org/link/warning-keys for more information.
+          at SemesterDisplay (/home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/src/components/SemesterDisplay.tsx:10:5)
+          at div
+          at /home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/node_modules/react-bootstrap/cjs/Container.js:24:3
+          at DegreePlanDisplay (/home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/src/components/DegreePlanDisplay.tsx:9:5)
+          at div
+          at /home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/node_modules/react-bootstrap/cjs/Col.js:72:8
+          at div
+          at /home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/node_modules/react-bootstrap/cjs/Row.js:22:3
+          at div
+          at /home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/node_modules/react-bootstrap/cjs/Container.js:24:3
+          at div
+          at App (/home/runner/work/cis-scheduler-team-28/cis-scheduler-team-28/src/App.tsx:19:9)
+
+      42 |     }
+      43 |     return (
+    > 44 |         <Container>
+         |         ^
+      45 |             {degreeplanList[0].semesters.map((semester: Semester) => (
+      46 |                 <>
+      47 |                     <Container>
+
+      at printWarning (node_modules/react/cjs/react-jsx-dev-runtime.development.js:117:30)
+      at error (node_modules/react/cjs/react-jsx-dev-runtime.development.js:93:5)
+      at validateExplicitKey (node_modules/react/cjs/react-jsx-dev-runtime.development.js:986:5)
+      at validateChildKeys (node_modules/react/cjs/react-jsx-dev-runtime.development.js:1013:11)
+      at jsxWithValidation (node_modules/react/cjs/react-jsx-dev-runtime.development.js:1184:11)
+      at SemesterDisplay (src/components/SemesterDisplay.tsx:44:9)
+      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:14985:18)
+      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:17811:13)
+
 PASS src/tests/Courses.test.tsx
 PASS src/tests/App.test.tsx
   ● Console
@@ -43,17 +80,17 @@ PASS src/tests/App.test.tsx
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |   46.96 |    14.28 |      32 |   48.78 |                   
+All files               |   50.75 |    21.42 |   38.66 |   51.21 |                   
  src                    |      50 |      100 |    37.5 |      50 |                   
   App.tsx               |      50 |      100 |    37.5 |      50 | 26-37,113         
- src/components         |   46.84 |    14.28 |   31.81 |   49.03 |                   
-  AddCourse.tsx         |      35 |        0 |    8.33 |      35 | 27-63,81-146      
+ src/components         |   51.35 |    21.42 |   39.39 |   51.92 |                   
+  AddCourse.tsx         |      35 |        0 |    8.33 |      35 | 27-63,85-150      
   AddDegreePlan.tsx     |   33.33 |      100 |   33.33 |   33.33 | 18-21,39          
   AddSemester.tsx       |      25 |        0 |      20 |      25 | 19-32,49          
   CatalogCourses.tsx    |   82.35 |    33.33 |   72.72 |   81.25 | 39,45-48          
   CourseDisplay.tsx     |   66.66 |       50 |     100 |   66.66 | 10                
   CoursePool.tsx        |      50 |        0 |   33.33 |      50 | 13-14,21,27       
-  DegreePlanDisplay.tsx |      50 |        0 |    12.5 |      70 | 22-25,37          
+  DegreePlanDisplay.tsx |   85.71 |      100 |      75 |     100 |                   
   DragCourse.tsx        |   72.72 |       25 |      75 |   72.72 | 17-19             
   EditCourses.tsx       |       0 |        0 |       0 |       0 | 24-85             
   SemesterDisplay.tsx   |   46.15 |        0 |      30 |   54.54 | 23-37,90          
@@ -63,8 +100,8 @@ All files               |   46.96 |    14.28 |      32 |   48.78 |
   semester.ts           |       0 |        0 |       0 |       0 |                   
 ------------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 2 passed, 2 total
-Tests:       5 passed, 5 total
+Test Suites: 3 passed, 3 total
+Tests:       9 passed, 9 total
 Snapshots:   0 total
-Time:        4.008 s
+Time:        7.406 s
 Ran all test suites.
