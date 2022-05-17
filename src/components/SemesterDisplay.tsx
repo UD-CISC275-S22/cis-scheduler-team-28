@@ -88,6 +88,7 @@ export function SemesterDisplay({
                         <Col>
                             <Button
                                 onClick={() => clearCourses(semester.title)}
+                                data-testid="ClearCoursesButton"
                             >
                                 Clear Courses
                             </Button>

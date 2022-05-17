@@ -80,7 +80,9 @@ export function CatalogCourses(): JSX.Element {
             <DndProvider backend={HTML5Backend}>
                 <CourseDisplay chosenCourse={chosenCourse}></CourseDisplay>
             </DndProvider>
-            <Button onClick={changeEditMode}>Edit Course</Button>
+            <Button onClick={changeEditMode} data-testid="EditCourse">
+                Edit Course
+            </Button>
             <Button onClick={() => deleteCourse(chosenCourse)}>
                 Delete Course
             </Button>

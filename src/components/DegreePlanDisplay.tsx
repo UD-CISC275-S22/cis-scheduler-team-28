@@ -34,13 +34,17 @@ export function DegreePlanDisplay({
             <Row>
                 <h1>{degreeplanList[0].title}</h1>
                 <Col>
-                    <Button onClick={() => clearSemesters()}>
+                    <Button
+                        onClick={() => clearSemesters()}
+                        data-testid="ClearSemButton"
+                    >
                         Clear Semesters
                     </Button>
                 </Col>
                 <Col>
                     <Button
                         className="add-degree-plan"
+                        data-testid="AddPlan"
                         onClick={handleOpenPlan}
                     >
                         Add Plan
@@ -55,7 +59,11 @@ export function DegreePlanDisplay({
             </Row>
             <Row>
                 <Col>
-                    <Button className="add-semester" onClick={handleOpenSem}>
+                    <Button
+                        className="add-semester"
+                        data-testid="AddSemester"
+                        onClick={handleOpenSem}
+                    >
                         Add Semester
                     </Button>
                 </Col>
@@ -67,6 +75,7 @@ export function DegreePlanDisplay({
                 ></AddSemester>
             </Row>
             <SemesterDisplay
+                data-testid="SemDisplay"
                 degreeplanList={degreeplanList}
                 setDegreeplanList={setDegreeplanList}
             ></SemesterDisplay>
