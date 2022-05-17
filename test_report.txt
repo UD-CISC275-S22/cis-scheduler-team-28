@@ -80,14 +80,14 @@ PASS src/tests/App.test.tsx
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |   50.75 |    21.42 |   38.66 |   51.21 |                   
+All files               |   50.37 |    21.42 |   38.66 |   50.79 |                   
  src                    |      50 |      100 |    37.5 |      50 |                   
   App.tsx               |      50 |      100 |    37.5 |      50 | 26-37,113         
- src/components         |   51.35 |    21.42 |   39.39 |   51.92 |                   
+ src/components         |   50.87 |    21.42 |   39.39 |    51.4 |                   
   AddCourse.tsx         |      35 |        0 |    8.33 |      35 | 27-63,85-150      
   AddDegreePlan.tsx     |   33.33 |      100 |   33.33 |   33.33 | 18-21,39          
   AddSemester.tsx       |      25 |        0 |      20 |      25 | 19-32,49          
-  CatalogCourses.tsx    |   82.35 |    33.33 |   72.72 |   81.25 | 39,45-48          
+  CatalogCourses.tsx    |      75 |    33.33 |   72.72 |   73.68 | 34,46-55          
   CourseDisplay.tsx     |   66.66 |       50 |     100 |   66.66 | 10                
   CoursePool.tsx        |      50 |        0 |   33.33 |      50 | 13-14,21,27       
   DegreePlanDisplay.tsx |   85.71 |      100 |      75 |     100 |                   
@@ -103,5 +103,5 @@ All files               |   50.75 |    21.42 |   38.66 |   51.21 |
 Test Suites: 3 passed, 3 total
 Tests:       9 passed, 9 total
 Snapshots:   0 total
-Time:        7.406 s
+Time:        5.873 s
 Ran all test suites.
