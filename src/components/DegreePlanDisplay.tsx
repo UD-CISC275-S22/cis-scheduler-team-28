@@ -2,6 +2,7 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import { SemesterDisplay } from "./SemesterDisplay";
 import { DegreePlan } from "../interfaces/degreeplan";
 import { EditDegreePlan } from "./EditDegreePlan";
+import { AddDegreePlan } from "./AddDegreePlan";
 import React from "react";
 
 export function DegreePlanDisplay({
@@ -35,7 +36,14 @@ export function DegreePlanDisplay({
                     </Button>
                 </Col>
                 <Col>
-                    <Button onClick={handleOpen}>Edit Plan</Button>
+                    <Button className="edit-degree-plan" onClick={handleOpen}>
+                        Edit Plan
+                    </Button>
+                </Col>
+                <Col>
+                    <Button className="add-degree-plan" onClick={handleOpen}>
+                        Add Plan
+                    </Button>
                 </Col>
                 <SemesterDisplay
                     degreeplanList={degreeplanList}
@@ -47,6 +55,12 @@ export function DegreePlanDisplay({
                     degreeplanList={degreeplanList}
                     setDegreeplanList={setDegreeplanList}
                 ></EditDegreePlan>
+                <AddDegreePlan
+                    show={open}
+                    handleClose={handleClose}
+                    degreeplanList={degreeplanList}
+                    setDegreeplanList={setDegreeplanList}
+                ></AddDegreePlan>
             </Row>
         </Container>
     );
