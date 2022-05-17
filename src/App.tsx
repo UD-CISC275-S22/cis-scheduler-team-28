@@ -17,7 +17,7 @@ const DEGREEPLANLIST: DegreePlan[] = [DEFAULTDEGREEPLAN, MOCKDEGREEPLAN];
 function App(): JSX.Element {
     const [degreeplanList, setDegreeplanList] =
         useState<DegreePlan[]>(DEGREEPLANLIST);
-    const [degreeplan, setDegreeplan] = useState<DegreePlan>(degreeplanList[0]);
+    //const [degreeplan, setDegreeplan] = useState<DegreePlan>(degreeplanList[0]);
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -26,11 +26,12 @@ function App(): JSX.Element {
         const degreeplanIndex = degreeplanList.findIndex(
             (degreeplan: DegreePlan): boolean => degreeplan.title === title
         );
-        setDegreeplan({
-            ...degreeplan,
-            title: degreeplanList[degreeplanIndex].title,
-            semesters: degreeplanList[degreeplanIndex].semesters
-        });
+        setDegreeplanList(
+            ([degreeplanList[0], degreeplanList[degreeplanIndex]] = [
+                degreeplanList[degreeplanIndex],
+                degreeplanList[0]
+            ])
+        );
     }
 
     return (
@@ -103,7 +104,7 @@ function App(): JSX.Element {
                                 Choose Degree Plan to Display:
                             </Form.Label>
                             <Form.Select
-                                value={degreeplan.title}
+                                value={degreeplanList[0].title}
                                 onChange={(
                                     event: React.ChangeEvent<HTMLSelectElement>
                                 ) => updateDegreeplan(event.target.value)}
@@ -121,8 +122,6 @@ function App(): JSX.Element {
                             </Form.Select>
                         </Form.Group>
                         <DegreePlanDisplay
-                            degreeplan={degreeplan}
-                            setDegreeplan={setDegreeplan}
                             degreeplanList={degreeplanList}
                             setDegreeplanList={setDegreeplanList}
                         ></DegreePlanDisplay>
