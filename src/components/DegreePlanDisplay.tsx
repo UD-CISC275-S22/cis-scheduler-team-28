@@ -41,6 +41,7 @@ export function DegreePlanDisplay({
                 <Col>
                     <Button
                         className="add-degree-plan"
+                        data-testid="AddPlan"
                         onClick={handleOpenPlan}
                     >
                         Add Plan
@@ -55,7 +56,11 @@ export function DegreePlanDisplay({
             </Row>
             <Row>
                 <Col>
-                    <Button className="add-semester" onClick={handleOpenSem}>
+                    <Button
+                        className="add-semester"
+                        data-testid="AddSemester"
+                        onClick={handleOpenSem}
+                    >
                         Add Semester
                     </Button>
                 </Col>
