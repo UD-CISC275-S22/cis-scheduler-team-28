@@ -21,7 +21,7 @@ export const DragCourse = ({ course }: { course: Course }) => {
 
     function ViewCourseInfo(): JSX.Element {
         return (
-            <div className={style} id="course-info-toggle">
+            <div className={style} data-testid="CourseInfo">
                 <div className="card card-body">
                     <p>
                         <b>Prereqs:</b> {course.preReq}

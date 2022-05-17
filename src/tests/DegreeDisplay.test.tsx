@@ -28,15 +28,8 @@ describe("DegreeDisplay tests", () => {
         const semDisplay = screen.queryByTestId("SemDisplay");
         expect(semDisplay).not.toBeInTheDocument();
     });
-    /*
     test("Can view remaining info in course pool", () => {
-        const courses = screen.getAllByTestId("courseview");
-        expect(courses).toHaveLength(3);
-        courses[0].click();
-        const deletecoursebutton = screen.getAllByTestId("deletecoursebutton");
-        fireEvent.click(deletecoursebutton[0]);
-        const courses2 = screen.queryAllByTestId("courseview");
-        expect(courses2).toHaveLength(2);
+        const courses = screen.getAllByTestId("CourseInfo");
+        expect(courses).toHaveLength(1);
     });
-    */
 });
