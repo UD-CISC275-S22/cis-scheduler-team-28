@@ -118,7 +118,6 @@ export function SemesterDisplay({
                 degreeplanList={degreeplanList}
                 setDegreeplanList={setDegreeplanList}
             ></AddCourse>
-            ;
         </Container>
     );
 }
