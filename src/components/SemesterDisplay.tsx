@@ -16,21 +16,27 @@ export function SemesterDisplay({
     const [openCourse, setOpenCourse] = React.useState(false);
     const handleOpenCourse = () => setOpenCourse(true);
     const handleCloseCourse = () => setOpenCourse(false);
+    function makeEmptySem(
+        originalPlan: DegreePlan,
+        semtitle: string
+    ): DegreePlan {
+        return {
+            ...originalPlan,
+            semesters: originalPlan.semesters.map(
+                (originalSem: Semester): Semester =>
+                    originalSem.title !== semtitle
+                        ? originalSem
+                        : { ...originalSem, courses: [] }
+            )
+        };
+    }
     function clearCourses(semtitle: string) {
         setDegreeplanList(
             degreeplanList.map(
                 (originalPlan: DegreePlan, index): DegreePlan =>
                     index !== 0
                         ? originalPlan
-                        : {
-                              ...originalPlan,
-                              semesters: originalPlan.semesters.map(
-                                  (originalSem: Semester): Semester =>
-                                      originalSem.title !== semtitle
-                                          ? originalSem
-                                          : { ...originalSem, courses: [] }
-                              )
-                          }
+                        : makeEmptySem(originalPlan, semtitle)
             )
         );
     }

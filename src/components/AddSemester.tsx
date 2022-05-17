@@ -16,17 +16,18 @@ export function AddSemester({
     setDegreeplanList: (degreeplanList: DegreePlan[]) => void;
 }) {
     const [tempTitle, setTempTitle] = useState<string>("");
+    function addNewSem(originalPlan: DegreePlan, newSem: Semester): DegreePlan {
+        return {
+            ...originalPlan,
+            semesters: [...originalPlan.semesters, newSem]
+        };
+    }
     function saveChanges() {
         const newSem = { title: tempTitle, courses: [] };
         setDegreeplanList(
             degreeplanList.map(
                 (originalPlan: DegreePlan, index): DegreePlan =>
-                    index !== 0
-                        ? originalPlan
-                        : {
-                              ...originalPlan,
-                              semesters: [...originalPlan.semesters, newSem]
-                          }
+                    index !== 0 ? originalPlan : addNewSem(originalPlan, newSem)
             )
         );
         handleClose();
