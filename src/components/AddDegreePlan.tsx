@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Button, Col, Form, Modal, Row } from "react-bootstrap";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 import { DegreePlan } from "../interfaces/degreeplan";
+import { CoursePool } from "./CoursePool";
 
 export function AddDegreePlan({
     show,
@@ -17,6 +20,9 @@ export function AddDegreePlan({
     function saveChanges() {
         const newPlan = { title: tempTitle, semesters: [] };
         setDegreeplanList([newPlan, ...degreeplanList]);
+        <DndProvider debugMode={true} backend={HTML5Backend}>
+            <CoursePool></CoursePool>
+        </DndProvider>;
         handleClose();
     }
 

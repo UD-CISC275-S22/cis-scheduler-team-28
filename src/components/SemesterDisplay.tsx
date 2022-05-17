@@ -30,7 +30,6 @@ export function SemesterDisplay({
             )
         );
     }
-
     return (
         <Container>
             {degreeplanList[0].semesters.map((semester: Semester) => (

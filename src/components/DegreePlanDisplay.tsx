@@ -1,7 +1,6 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { SemesterDisplay } from "./SemesterDisplay";
 import { DegreePlan } from "../interfaces/degreeplan";
-import { EditDegreePlan } from "./EditDegreePlan";
 import { AddDegreePlan } from "./AddDegreePlan";
 import React from "react";
 
@@ -49,12 +48,6 @@ export function DegreePlanDisplay({
                     degreeplanList={degreeplanList}
                     setDegreeplanList={setDegreeplanList}
                 ></SemesterDisplay>
-                <EditDegreePlan
-                    show={open}
-                    handleClose={handleClose}
-                    degreeplanList={degreeplanList}
-                    setDegreeplanList={setDegreeplanList}
-                ></EditDegreePlan>
                 <AddDegreePlan
                     show={open}
                     handleClose={handleClose}
