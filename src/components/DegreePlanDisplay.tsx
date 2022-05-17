@@ -35,9 +35,7 @@ export function DegreePlanDisplay({
                     </Button>
                 </Col>
                 <Col>
-                    <Button className="edit-degree-plan" onClick={handleOpen}>
-                        Edit Degree Plan
-                    </Button>
+                    <Button onClick={handleOpen}>Edit Plan</Button>
                 </Col>
                 <SemesterDisplay
                     degreeplanList={degreeplanList}

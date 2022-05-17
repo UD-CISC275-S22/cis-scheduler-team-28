@@ -30,7 +30,7 @@ export function EditDegreePlan({
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
-                <Modal.Title>Add New Plan</Modal.Title>
+                <Modal.Title>Edit Plan Title</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form.Group controlId="AddPlan" as={Row}>
