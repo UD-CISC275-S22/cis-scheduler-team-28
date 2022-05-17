@@ -22,25 +22,29 @@ const COURSES = Object.values(catalog).map((info) => ({
 
 export function CatalogCourses(): JSX.Element {
     const [courseList, setCourseList] = useState<Course[]>(COURSES);
-    const [chosenCourse, setChosenCourse] = useState<string>(
-        courseList[0].code
-    );
+    const [chosenCourse, setChosenCourse] = useState<Course>(courseList[0]);
     const [editing, setEditing] = useState<boolean>(false);
     function updateCourse(event: ChangeEvent) {
-        setChosenCourse(event.target.value);
-    }
-    function deleteCourse(id: string) {
-        setCourseList(
-            courseList.filter((course: Course): boolean => course.code !== id)
+        const newCourse = courseList.find(
+            (course: Course): boolean => course.code === event.target.value
         );
-        setChosenCourse(courseList[0].code);
+        if (newCourse !== undefined) {
+            setChosenCourse(newCourse);
+        } else {
+            setChosenCourse(courseList[0]);
+        }
+    }
+    function deleteCourse(delCourse: Course) {
+        setCourseList(
+            courseList.filter(
+                (course: Course): boolean => course.code !== delCourse.code
+            )
+        );
+        setChosenCourse(courseList[0]);
     }
     function changeEditMode() {
         setEditing(!editing);
     }
-    const courseInfo = COURSES.find(
-        (course: Course): boolean => course.code == chosenCourse
-    );
     function editCourse(title: string, newCourse: Course) {
         setCourseList(
             courseList.map(
@@ -48,15 +52,16 @@ export function CatalogCourses(): JSX.Element {
                     course.code === title ? newCourse : course
             )
         );
+        setChosenCourse(newCourse);
     }
-    return editing && courseInfo ? (
+    return editing ? (
         <EditCourses
-            code={courseInfo.code}
-            title={courseInfo.title}
-            credits={courseInfo.credits}
-            descr={courseInfo.descr}
-            preReqs={courseInfo.preReq}
-            type={courseInfo.type}
+            code={chosenCourse.code}
+            title={chosenCourse.title}
+            credits={chosenCourse.credits}
+            descr={chosenCourse.descr}
+            preReqs={chosenCourse.preReq}
+            type={chosenCourse.type}
             editCourse={editCourse}
             changeEditMode={changeEditMode}
         ></EditCourses>
@@ -64,7 +69,7 @@ export function CatalogCourses(): JSX.Element {
         <div>
             <h3>CISC Related Catalog:</h3>
             <Form.Group controlId="chosenClass">
-                <Form.Select value={chosenCourse} onChange={updateCourse}>
+                <Form.Select value={chosenCourse.code} onChange={updateCourse}>
                     {courseList.map((course: Course) => (
                         <option key={course.code} value={course.code}>
                             {course.code}
@@ -73,7 +78,7 @@ export function CatalogCourses(): JSX.Element {
                 </Form.Select>
             </Form.Group>
             <DndProvider backend={HTML5Backend}>
-                <CourseDisplay chosenCourse={courseInfo}></CourseDisplay>
+                <CourseDisplay chosenCourse={chosenCourse}></CourseDisplay>
             </DndProvider>
             <Button onClick={changeEditMode}>Edit Course</Button>
             <Button onClick={() => deleteCourse(chosenCourse)}>
