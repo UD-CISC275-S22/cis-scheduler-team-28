@@ -75,6 +75,7 @@ export function SemesterDisplay({
                                         <td>
                                             <Form.Check
                                                 type="checkbox"
+                                                data-testid="fulfilled"
                                                 name="courses"
                                                 label={"Completed"}
                                             />
@@ -94,7 +95,10 @@ export function SemesterDisplay({
                             </Button>
                         </Col>
                         <Col>
-                            <Button onClick={handleOpenCourse}>
+                            <Button
+                                onClick={handleOpenCourse}
+                                data-testid="AddCourseModal"
+                            >
                                 Add Course
                             </Button>
                             <AddCourse

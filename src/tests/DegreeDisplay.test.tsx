@@ -29,7 +29,11 @@ describe("DegreeDisplay tests", () => {
         expect(semDisplay).not.toBeInTheDocument();
     });
     test("Can view remaining info in course pool", () => {
-        const courses = screen.getAllByTestId("CourseInfo");
-        expect(courses).toHaveLength(1);
+        const courseStuff = screen.getAllByTestId("CourseInfo");
+        expect(courseStuff).toHaveLength(1);
+    });
+    test("Can check off completed courses in any visible course", () => {
+        const checkbox = screen.getAllByTestId("fulfilled");
+        expect(checkbox).toHaveLength(40);
     });
 });
