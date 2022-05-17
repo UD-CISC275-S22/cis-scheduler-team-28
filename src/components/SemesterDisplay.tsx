@@ -7,18 +7,15 @@ import { AddCourse } from "./AddCourse";
 import { v4 as uuid } from "uuid";
 
 export function SemesterDisplay({
-    show,
-    handleOpen,
-    handleClose,
     degreeplanList,
     setDegreeplanList
 }: {
-    show: boolean;
-    handleOpen: () => void;
-    handleClose: () => void;
     degreeplanList: DegreePlan[];
     setDegreeplanList: (degreeplanList: DegreePlan[]) => void;
 }): JSX.Element {
+    const [openCourse, setOpenCourse] = React.useState(false);
+    const handleOpenCourse = () => setOpenCourse(true);
+    const handleCloseCourse = () => setOpenCourse(false);
     function clearCourses(semtitle: string) {
         setDegreeplanList(
             degreeplanList.map(
@@ -90,7 +87,15 @@ export function SemesterDisplay({
                             </Button>
                         </Col>
                         <Col>
-                            <Button onClick={handleOpen}>Add Course</Button>
+                            <Button onClick={handleOpenCourse}>
+                                Add Course
+                            </Button>
+                            <AddCourse
+                                show={openCourse}
+                                handleClose={handleCloseCourse}
+                                degreeplanList={degreeplanList}
+                                setDegreeplanList={setDegreeplanList}
+                            ></AddCourse>
                         </Col>
                     </div>
                 </>

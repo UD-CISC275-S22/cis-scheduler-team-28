@@ -12,9 +12,12 @@ export function DegreePlanDisplay({
     degreeplanList: DegreePlan[];
     setDegreeplanList: (degreeplanList: DegreePlan[]) => void;
 }): JSX.Element {
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const [openPlan, setOpenPlan] = React.useState(false);
+    const handleOpenPlan = () => setOpenPlan(true);
+    const handleClosePlan = () => setOpenPlan(false);
+    const [openSem, setOpenSem] = React.useState(false);
+    const handleOpenSem = () => setOpenSem(true);
+    const handleCloseSem = () => setOpenSem(false);
     function clearSemesters() {
         setDegreeplanList(
             degreeplanList.map(
@@ -36,34 +39,34 @@ export function DegreePlanDisplay({
                     </Button>
                 </Col>
                 <Col>
-                    <Button className="add-degree-plan" onClick={handleOpen}>
+                    <Button
+                        className="add-degree-plan"
+                        onClick={handleOpenPlan}
+                    >
                         Add Plan
                     </Button>
                 </Col>
                 <AddDegreePlan
-                    show={open}
-                    handleClose={handleClose}
+                    show={openPlan}
+                    handleClose={handleClosePlan}
                     degreeplanList={degreeplanList}
                     setDegreeplanList={setDegreeplanList}
                 ></AddDegreePlan>
             </Row>
             <Row>
                 <Col>
-                    <Button className="add-semester" onClick={handleOpen}>
+                    <Button className="add-semester" onClick={handleOpenSem}>
                         Add Semester
                     </Button>
                 </Col>
                 <AddSemester
-                    show={open}
-                    handleClose={handleClose}
+                    show={openSem}
+                    handleClose={handleCloseSem}
                     degreeplanList={degreeplanList}
                     setDegreeplanList={setDegreeplanList}
                 ></AddSemester>
             </Row>
             <SemesterDisplay
-                show={open}
-                handleOpen={handleOpen}
-                handleClose={handleClose}
                 degreeplanList={degreeplanList}
                 setDegreeplanList={setDegreeplanList}
             ></SemesterDisplay>
