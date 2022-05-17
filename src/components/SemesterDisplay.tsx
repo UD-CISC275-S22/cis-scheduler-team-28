@@ -6,28 +6,34 @@ import { DegreePlan } from "../interfaces/degreeplan";
 import { v4 as uuid } from "uuid";
 
 export function SemesterDisplay({
-    degreeplan,
-    setDegreeplan
+    degreeplanList,
+    setDegreeplanList
 }: {
-    degreeplan: DegreePlan;
-    setDegreeplan: (degreeplan: DegreePlan) => void;
+    degreeplanList: DegreePlan[];
+    setDegreeplanList: (degreeplanList: DegreePlan[]) => void;
 }): JSX.Element {
-    function clearCourses(
-        degreeplan: DegreePlan,
-        semtitle: string
-    ): DegreePlan {
-        return {
-            ...degreeplan,
-            semesters: degreeplan.semesters.map((semester: Semester) =>
-                semester.title !== semtitle
-                    ? semester
-                    : { ...semester, courses: [] }
+    function clearCourses(semtitle: string) {
+        setDegreeplanList(
+            degreeplanList.map(
+                (originalPlan: DegreePlan, index): DegreePlan =>
+                    index !== 0
+                        ? originalPlan
+                        : {
+                              ...originalPlan,
+                              semesters: originalPlan.semesters.map(
+                                  (originalSem: Semester): Semester =>
+                                      originalSem.title !== semtitle
+                                          ? originalSem
+                                          : { ...originalSem, courses: [] }
+                              )
+                          }
             )
-        };
+        );
     }
+
     return (
         <Container>
-            {degreeplan.semesters.map((semester: Semester) => (
+            {degreeplanList[0].semesters.map((semester: Semester) => (
                 <>
                     <Container>
                         <h3>{semester.title}</h3>
@@ -70,13 +76,7 @@ export function SemesterDisplay({
                         </Table>
                     </Container>
                     <div>
-                        <Button
-                            onClick={() =>
-                                setDegreeplan(
-                                    clearCourses(degreeplan, semester.title)
-                                )
-                            }
-                        >
+                        <Button onClick={() => clearCourses(semester.title)}>
                             Clear Courses
                         </Button>
                     </div>
