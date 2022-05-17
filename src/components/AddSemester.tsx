@@ -1,22 +1,34 @@
 import React, { useState } from "react";
 import { Button, Col, Form, Modal, Row } from "react-bootstrap";
+import { DegreePlan } from "../interfaces/degreeplan";
 import { Semester } from "../interfaces/semester";
+import { SemesterDisplay } from "./SemesterDisplay";
 
 export function AddSemester({
     show,
     handleClose,
-    addSemester
+    degreeplanList,
+    setDegreeplanList
 }: {
     show: boolean;
     handleClose: () => void;
-    addSemester: (newSemester: Semester) => void;
+    degreeplanList: DegreePlan[];
+    setDegreeplanList: (degreeplanList: DegreePlan[]) => void;
 }) {
-    const [title, setTitle] = useState<string>("");
+    const [tempTitle, setTempTitle] = useState<string>("");
     function saveChanges() {
-        addSemester({
-            title: "",
-            courses: []
-        });
+        const newSem = { title: tempTitle, courses: [] };
+        setDegreeplanList(
+            degreeplanList.map(
+                (originalPlan: DegreePlan, index): DegreePlan =>
+                    index !== 0
+                        ? originalPlan
+                        : {
+                              ...originalPlan,
+                              semesters: [...originalPlan.semesters, newSem]
+                          }
+            )
+        );
         handleClose();
     }
     return (
@@ -31,10 +43,10 @@ export function AddSemester({
                     </Form.Label>
                     <Col>
                         <Form.Control
-                            value={title}
+                            value={tempTitle}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => setTitle(event.target.value)}
+                            ) => setTempTitle(event.target.value)}
                         />
                     </Col>
                 </Form.Group>
